@@ -1,4 +1,5 @@
 import Home from "./home"
+import Chooseus from "./chooseus"
 
 
 
@@ -9,6 +10,7 @@ export default function Landingpage(){
 
 <div id="home">
      <Home />
+     <Chooseus />
 </div>
 
          </div>
