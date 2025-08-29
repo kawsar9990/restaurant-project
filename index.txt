@@ -1,0 +1,8 @@
+1. ---- header -----
+2. header import to app
+3. blog --- product fillter
+
+
+
+4. swiper slider ---- components
+5. homepage --- swipper

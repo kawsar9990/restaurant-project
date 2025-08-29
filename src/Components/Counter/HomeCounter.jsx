@@ -1,0 +1,34 @@
+import CountUp from 'react-countup';
+
+export default function HomeCounter(){
+
+return(
+     <div>
+
+<div className='flex lg:gap-50 mt-5 mb-5 justify-center gap-10 text-center'>
+
+<div>
+     <p className='text-blue-600 font-bold'><CountUp start={0} end={40} duration={5} />+</p>
+     <span className='font-black'>Company</span>
+</div>
+
+
+<div>
+   <p className='text-blue-600 font-bold'>$<CountUp start={0} end={1000000} duration={5} /></p>
+     <span className='font-black'>MontlyEarn</span>
+</div>
+
+
+<div>
+   <p className='text-blue-600 font-bold'><CountUp start={0} end={4000} duration={5} />+</p>
+     <span className='font-black'>Project</span>
+</div>
+
+
+</div>
+
+
+     </div>
+)
+
+}
