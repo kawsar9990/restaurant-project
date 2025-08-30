@@ -12,7 +12,7 @@ export default function Chooseus(){
 
 <div className='mt-7 w-80 flex items-start space-x-6'>
      <p className='text-3xl font-black lg:text-4xl '>Save Your Time with A Lot of Features</p>
- <div class="border-l-2 border-gray-600 h-24"></div>
+ <div class="hidden lg:flex border-l-2 border-gray-600 h-24"></div>
 </div>
 
 

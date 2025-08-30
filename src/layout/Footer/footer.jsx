@@ -92,7 +92,7 @@ export default function Footer(){
 <div className='text-white p-2 '>
 <div className='flex  lg:gap-170 justify-center gap-3'>
      <p><FontAwesomeIcon icon={faPhone} /> +8801602084187</p>
-     <p><FontAwesomeIcon icon={faLocationDot}/> MIrzapur,Tangail,Bangladesh</p>
+     <p><FontAwesomeIcon icon={faLocationDot}/> Mirzapur,Tangail,Bangladesh</p>
 </div>
 </div>
 {/* last  */}
