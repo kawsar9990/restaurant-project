@@ -7,8 +7,8 @@ library.add(faPhoneVolume, faRocket , faPlay, faCarSide, faSackDollar)
 import img from '../../../public/img/stephan-valentin-l2viCaR3JUo-unsplash-768x768.jpg'
 import img2 from '../../../public/img/food-Clay-01.jpg'
 
-import img3 from '../../../public/accountimg/app4.png'
-import img4 from '../../../public/accountimg/google-play-badge-e1627458011377.png'
+// import img3 from '../../../public/accountimg/app4.png'
+// import img4 from '../../../public/accountimg/google-play-badge-e1627458011377.png'
 
 
 import videos from '../../../public/video/5 (2).mp4'
