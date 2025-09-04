@@ -4,5 +4,15 @@
 
 
 
-4. swiper slider ---- components
-5. homepage --- swipper
+
+4. checkoutpage ---end (start --- Privecy policy page , therms of use page, order summery, input filed red signal erro, remind me page, heanding free te i marks)
+5. reservation --- start
+6. about --- start
+7. 404 found page --- end
+8. Faq page --- end
+9. Aboutuspage --- end
+10. homepage --- end
+
+
+
+

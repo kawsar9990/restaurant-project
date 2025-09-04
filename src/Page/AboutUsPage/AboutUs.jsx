@@ -2,6 +2,7 @@ import About2nd from "./about2nd"
 import Flag from "./Flag"
 import MiddleImg from "./middleimg"
 import Theme1 from "./Theme1"
+import AboutUsEnd from "./AboutUsEnd"
 
 export default function AboutUsPage(){
      return(
@@ -10,6 +11,7 @@ export default function AboutUsPage(){
                <Flag />
                <MiddleImg />
                <Theme1 />
+               <AboutUsEnd />
           </div>
      )
 }

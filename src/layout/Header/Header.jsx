@@ -30,7 +30,7 @@ useEffect(()=>{
           <motion.header
           transition={{duration: 0.3}}
           animate={{
-               boxShadow: scroll ? "0 4px 12px rgba(0,0,0,0.15)"
+               boxShadow: scroll ? "0 4px 15px rgba(10,10,0,0.15)"
                : "0 0px 0px rgba(0,0,0,0)",
           }}
           style={{fontFamily: "Poppins, sans-serif"}}
@@ -60,7 +60,7 @@ useEffect(()=>{
       <Link to="" className="block px-4 py-2 hover:bg-gray-100">Product Details</Link>
        <Link to="" className="block px-4 py-2 hover:bg-gray-100">Wishlist</Link>
         <Link to="" className="block px-4 py-2 hover:bg-gray-100">Cart</Link>
-          <Link to="" className="block px-4 py-2 hover:bg-gray-100">Checkout</Link>
+          <Link to="/aboutus/checkout" className="block px-4 py-2 hover:bg-gray-100">Checkout</Link>
 </div>
 
 </div>
@@ -77,9 +77,9 @@ useEffect(()=>{
 <div className="absolute left-0 mt-2 w-50 bg-white text-black border rounded-md shadow-lg opacity-0 invisible  group-hover:opacity-100 group-hover:visible transition-all duration-200">
      <Link to="aboutus" className="block px-4 py-2 hover:bg-gray-100">About Us</Link>
           <Link to="" className="block px-4 py-2 hover:bg-gray-100">Contact</Link>
-       <Link to="" className="block px-4 py-2 hover:bg-gray-100">Faq</Link>
-        <Link to="" className="block px-4 py-2 hover:bg-gray-100">Comming Soon</Link>
-          <Link to="" className="block px-4 py-2 hover:bg-gray-100">404</Link>
+       <Link to="faq" className="block px-4 py-2 hover:bg-gray-100">Faq</Link>
+        <Link to="reservation" className="block px-4 py-2 hover:bg-gray-100">Reservation</Link>
+          <Link to="404notfound" className="block px-4 py-2 hover:bg-gray-100">404</Link>
 </div>
 
 </div>
@@ -94,11 +94,13 @@ useEffect(()=>{
                 Blog
                 <svg className="w-4 h-4 ml-1"fill="none"stroke="currentColor"viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg></button>
 
-<div className="absolute left-0 mt-2 w-40 bg-white text-black border rounded-md shadow-lg opacity-0 invisible  group-hover:opacity-100 group-hover:visible transition-all duration-200">
+<div className="absolute left-0 mt-2 w-37 bg-white text-black border rounded-md shadow-lg opacity-0 invisible  group-hover:opacity-100 group-hover:visible transition-all duration-200">
      <Link to="" className="block px-4 py-2 hover:bg-gray-100">Find Store</Link>
+             <Link to="" className="block px-4 py-2 hover:bg-gray-100">Team</Link>
+                     <Link to="" className="block px-4 py-2 hover:bg-gray-100">News</Link>
        <Link to="" className="block px-4 py-2 hover:bg-gray-100">Help Center</Link>
         <Link to="" className="block px-4 py-2 hover:bg-gray-100">Blog Details</Link>
-         <Link to="" className="block px-4 py-2 hover:bg-gray-100">Login</Link>
+          <Link to="" className="block px-4 py-2 hover:bg-gray-100">Single Post</Link>
 </div>
 
 </div>
@@ -138,10 +140,10 @@ className="md:hidden text-2xl cursor-pointer">
      animate={{y: 0, opacity: 1}}
      exit={{y: "-100%", opacity: 0}}
      transition={{duration : 0.4}}
-   className="md:hidden fixed top-[40px]  left-0 max-h-1125 pb-5 w-full bg-blue-50 shadow-lg flex flex-col pt-5 pl-2 z-100"     
+   className="md:hidden fixed top-[40px]  left-0 max-h-1125 pb-5 w-full bg-blue-50 shadow-lg flex flex-col pt-2 pl-2 z-100"     
 >
 
-<ul className="flex flex-col gap-6 font-bold  text-lg">
+<ul className="flex flex-col gap-4 font-bold  text-lg">
      <Link to="/" className="hover:text-blue-500">Home</Link>
        <Link to="about" className="hover:text-blue-500">About</Link>
 
@@ -149,15 +151,15 @@ className="md:hidden text-2xl cursor-pointer">
 <div>
    <button
    onClick={()=> setShopOPen(prev => !prev)}
-   className="flex justify-between w-full py-2 font-bold hover:text-blue-500">
+   className="flex justify-between w-full py-0 font-bold hover:text-blue-500">
      Shop  <span>{shopOpen ? "▲" : "▼"}</span></button> 
      {shopOpen && (
-            <div className="pl-4 flex flex-col gap-2">
-                 <Link to="" className="block px-4 py-2 hover:bg-gray-100">Product</Link>
-      <Link to="" className="block px-4 py-2 hover:bg-gray-100">Product Details</Link>
-       <Link to="" className="block px-4 py-2 hover:bg-gray-100">Wishlist</Link>
-        <Link to="" className="block px-4 py-2 hover:bg-gray-100">Cart</Link>
-          <Link to="" className="block px-4 py-2 hover:bg-gray-100">Checkout</Link>
+            <div className="pl-4 flex flex-col gap-0">
+                 <Link to="" className="block px-4 py-1 hover:bg-gray-100">Product</Link>
+      <Link to="" className="block px-4 py-1 hover:bg-gray-100">Product Details</Link>
+       <Link to="" className="block px-4 py-1 hover:bg-gray-100">Wishlist</Link>
+        <Link to="" className="block px-4 py-1 hover:bg-gray-100">Cart</Link>
+          <Link to="/aboutus/checkout" className="block px-4 py-1 hover:bg-gray-100">Checkout</Link>
                </div>     
      )} 
 </div>
@@ -171,15 +173,15 @@ className="md:hidden text-2xl cursor-pointer">
 <div>
    <button
    onClick={()=> setresoOPen(prev => !prev)}
-   className="flex justify-between w-full py-2 font-bold hover:text-blue-500">
+   className="flex justify-between w-full  font-bold hover:text-blue-500">
      Resources  <span>{setresoOPen ? "▲" : "▼"}</span></button> 
      {resoOpen && (
-            <div className="pl-4 flex flex-col gap-2">
- <Link to="aboutus" className="block px-4 py-2 hover:bg-gray-100">About Us</Link>
-          <Link to="" className="block px-4 py-2 hover:bg-gray-100">Contact</Link>
-       <Link to="" className="block px-4 py-2 hover:bg-gray-100">Faq</Link>
-        <Link to="" className="block px-4 py-2 hover:bg-gray-100">Comming Soon</Link>
-          <Link to="" className="block px-4 py-2 hover:bg-gray-100">404</Link> </div>     
+            <div className="pl-4 flex flex-col gap-0">
+ <Link to="aboutus" className="block px-4 py-1 hover:bg-gray-100">About Us</Link>
+          <Link to="" className="block px-4 py-1 hover:bg-gray-100">Contact</Link>
+       <Link to="faq" className="block px-4 py-1 hover:bg-gray-100">Faq</Link>
+        <Link to="reservation" className="block px-4 py-1 hover:bg-gray-100">Reservation</Link>
+          <Link to="404notfound" className="block px-4 py-1 hover:bg-gray-100">404</Link> </div>     
      )} 
 </div>
 
@@ -197,11 +199,12 @@ className="md:hidden text-2xl cursor-pointer">
    className="flex justify-between w-full py-2 font-bold hover:text-blue-500">
      Blog  <span>{setBlogOPen ? "▲" : "▼"}</span></button> 
      {blogOpen && (
-            <div className="pl-4 flex flex-col gap-2">
-     <Link to="" className="block px-4 py-2 hover:bg-gray-100">Find Store</Link>
+            <div className="pl-4 flex flex-col gap-0">
+     <Link to="" className="block px-4  hover:bg-gray-100">Find Store</Link>
+     <Link to="" className="block px-4 py-2 hover:bg-gray-100">Team</Link>
+      <Link to="" className="block px-4 py-2 hover:bg-gray-100">News</Link>
        <Link to="" className="block px-4 py-2 hover:bg-gray-100">Help Center</Link>
         <Link to="" className="block px-4 py-2 hover:bg-gray-100">Blog Details</Link>
-         <Link to="" className="block px-4 py-2 hover:bg-gray-100">Login</Link>
                </div>     
      )} 
 </div>

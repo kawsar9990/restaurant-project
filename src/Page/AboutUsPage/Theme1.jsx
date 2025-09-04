@@ -35,7 +35,7 @@ export default function Theme1(){
           <p className="pt-5 pb-5 font-bold">Free support for 6 months</p>
 
           <div className="pt-5 pb-5">
-               <button className="p-3 cursor-pointer hover:transition-all hover:duration-200 rounded-3xl bg-yellow-400 w-50 hover:bg-white hover:text-black hover:outline-2 hover:outline-amber-400 text-black font-black"><Link to="">Purchase Theme</Link></button>
+               <button className="p-3 cursor-pointer hover:transition-all hover:duration-200 rounded-3xl bg-yellow-400 w-50 hover:bg-white hover:text-black hover:outline-2 hover:outline-amber-400 text-black font-black"><Link to="/aboutus/checkout">Purchase Theme</Link></button>
           </div>
      </div>
 
@@ -64,7 +64,7 @@ export default function Theme1(){
           <p className="pt-5 pb-5 font-black">Free support for 12 months</p>
 
           <div className="pt-5 pb-5">
-               <button className="p-3 hover:transition-all hover:duration-200 cursor-pointer rounded-3xl bg-yellow-400 w-50 hover:bg-white hover:text-black hover:outline-2 hover:outline-amber-400 text-black font-black"><Link to="">Purchase Theme</Link></button>
+               <button className="p-3 hover:transition-all hover:duration-200 cursor-pointer rounded-3xl bg-yellow-400 w-50 hover:bg-white hover:text-black hover:outline-2 hover:outline-amber-400 text-black font-black"><Link to="/aboutus/checkout">Purchase Theme</Link></button>
           </div>
 
           <p className="pb-5 font-black">* Save 57% by getting 12 months support instead of after support has expired.</p>
