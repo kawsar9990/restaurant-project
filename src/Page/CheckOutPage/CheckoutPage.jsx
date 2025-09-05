@@ -16,7 +16,7 @@ export default function CheckOutPage(){
 const [isSign, setIsSign] = useState(false)
 
 return(
-     <div className="bg-white w-full text-black pt-5">
+     <div className="bg-white text-black pt-5">
 
 
 <div className="p-5">
@@ -32,17 +32,17 @@ return(
 
 
 
-<div className="flex flex-row justify-between pb-2 pt-2">
+<div className="flex flex-row justify-between pb-2 pt-2 items-center">
 
 <div>
-<h1 className="pl-5 text-2xl font-bold"> {isSign ? "Sign In" : "Create Account"} </h1>
+<h1 className="pl-5 text-[10px] xl:text-2xl font-bold"> {isSign ? "Sign In" : "Create Account"} </h1>
 </div>
 
-<div className="flex gap-3">
-     <p className=""> {isSign ? "New here?" : "Already have an account?"} </p>
+<div className="flex gap-5 items-center">
+     <p className="text-[10px] xl:text-[20px]"> {isSign ? "New here?" : "Already have an account?"} </p>
 <button
 onClick={()=> setIsSign(!isSign)}
-className="bg-[#808080] rounded hover:bg-blue-500 cursor-pointer text-white p-1 min-w-20 max-w-50 font-black">
+className="bg-[#808080] rounded text-[10px] xl:text-[20px] hover:bg-blue-500  cursor-pointer text-white p-1 min-w-15 h-10 max-w-50 font-black">
    {isSign ? "Create Account" : "Sign In"} </button>
 </div>
 
@@ -89,7 +89,7 @@ className="bg-[#808080] rounded hover:bg-blue-500 cursor-pointer text-white p-1 
      <div className="pt-5">
 
 <div>
-     <p className="flex justify-center gap-85 font-bold pb-3">
+     <p className="flex justify-between font-bold pb-3 ">
           <label htmlFor="em">Username or Email</label>
          <Link to="">Remind Me</Link>
      </p>
@@ -97,7 +97,7 @@ className="bg-[#808080] rounded hover:bg-blue-500 cursor-pointer text-white p-1 
      </div>
 
 <div className="pb-5">
-     <p className="flex justify-center pt-5 gap-75 font-bold pb-3">
+     <p className="flex justify-between pt-5 font-bold pb-3">
           <label htmlFor="pa">Username or Email</label>
          <Link to="">Forgot Password</Link>
      </p>
@@ -171,20 +171,20 @@ readOnly className="cursor-pointer  transform scale-150"/>
 
 <div className="flex  flex-col xl:w-80 w-full pt-10 pb-10 xl:pt-0 xl:pb-0">
 <div className="shadow bg-[#FAFAFA] p-5">
+    <h1 className="text-center font-black">Order Summary</h1>
      <div>
-<h1 className="text-center font-black">Order Summary</h1>
 <hr />
-<div className="flex pt-2 flex-row justify-content-center items-center gap-97 xl:gap-30">
+<div className="flex justify-between items-center">
      <p  className="font-bold">Grand Restaurant</p>
      <p  className="font-bold">$00</p>
 </div>
-<div className="flex pt-2 pb-3 flex-row justify-content-center items-center gap-104 xl:gap-37">
+<div className="flex justify-between items-center">
      <p className="font-bold">Handling Fee: <a href=""></a></p>
      <p  className="font-bold">$00</p>
 </div>
 <hr />
 
-<div className="flex pt-2 flex-row justify-content-center items-center gap-115 xl:gap-46">
+<div className="flex justify-between items-center">
      <p  className="font-bold">Total:</p>
      <p  className="font-bold">Us$ 00</p>
 </div>
