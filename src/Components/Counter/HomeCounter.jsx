@@ -9,19 +9,19 @@ return(
 
 <div>
      <p className='text-blue-600 font-bold'><CountUp start={0} end={40} duration={5} />+</p>
-     <span className='font-black'>Company</span>
+     <span className='text-white font-bold'>Company</span>
 </div>
 
 
 <div>
    <p className='text-blue-600 font-bold'>$<CountUp start={0} end={1000000} duration={5} /></p>
-     <span className='font-black'>MontlyEarn</span>
+     <span className='text-white font-bold'>MontlyEarn</span>
 </div>
 
 
 <div>
    <p className='text-blue-600 font-bold'><CountUp start={0} end={4000} duration={5} />+</p>
-     <span className='font-black'>Project</span>
+     <span className='text-white font-bold'>Project</span>
 </div>
 
 

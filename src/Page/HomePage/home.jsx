@@ -4,16 +4,16 @@ import HomeCounter from "../../Components/Counter/HomeCounter"
 
 export default function Home(){
      return(
-          <div className="bg-[#11173E] w-full h-150 text-white">
+          <div className="bg-[#113]">
 
 
 <div className="pt-10">
 
 
 {/* text  */}
-<div className="text-center lg:pt-10 pt-7">
+<div className="">
 
-<h1>Welcome Sir/Mam</h1>
+<h1 className="text-center text-white">Welcome Sir/Mam</h1>
 
 <div className="">
      <AnimatedText />
@@ -25,7 +25,7 @@ export default function Home(){
 
 
 {/* slider */}
-<div className="pt-5 lg:pt-10">
+<div className="">
 <HomeCounter />
 </div>
 {/* slider */}
@@ -35,7 +35,7 @@ export default function Home(){
 
 
 {/* slider */}
-<div className="pt-5 lg:pt-10">
+<div className="">
 <HomeSlider />
 </div>
 {/* slider */}

@@ -34,7 +34,7 @@ useEffect(()=>{
                : "0 0px 0px rgba(0,0,0,0)",
           }}
           style={{fontFamily: "Poppins, sans-serif"}}
-           className="flex fixed top-0 left-0 bg-blue-50 w-full p-2 items-center justify-between z-50">
+           className="flex fixed top-0 left-0 right-0 bg-blue-50 w-full p-2 items-center justify-between z-50">
 
 <h1>
      <a href="#home"  className="font-black text-2xl hover:text-blue-500">Kawsar.Resturent</a>
@@ -126,7 +126,7 @@ useEffect(()=>{
 {/* mobile menu button */}
 <button 
 onClick={()=> setopen(!menuOpen)}
-className="md:hidden text-2xl cursor-pointer">
+className="md:hidden  text-2xl cursor-pointer">
       <FontAwesomeIcon icon={menuOpen ? "xmark" : "bars"} />
 </button>
 
@@ -140,7 +140,7 @@ className="md:hidden text-2xl cursor-pointer">
      animate={{y: 0, opacity: 1}}
      exit={{y: "-100%", opacity: 0}}
      transition={{duration : 0.4}}
-   className="md:hidden fixed top-[40px]  left-0 max-h-1125 pb-5 w-full bg-blue-50 shadow-lg flex flex-col pt-2 pl-2 z-100"     
+   className="md:hidden fixed top-[40px] right-0  left-0 max-h-1125 pb-5 w-full bg-blue-50 shadow-lg flex flex-col pt-2 pl-2 z-100"     
 >
 
 <ul className="flex flex-col gap-4 font-bold  text-lg">

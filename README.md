@@ -16,4 +16,4 @@ If you are developing a production application, we recommend using TypeScript wi
 
 This is my awesome project 🚀
 
-👉 **Live Demo:** [Click Here](Your site is live at /)
+👉 **Live Demo:** [Click Here](https://kawsar-restaurant-projects.netlify.app//)
