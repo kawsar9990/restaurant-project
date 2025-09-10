@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router";
 
 
 import App from "../App";
-import AboutPage from "../Page/AboutPage/AboutPAge";
+import About from '../Page/AboutPage/AboutPage'
 import Profile from "../Page/ProfilePage/Profile";
 import Contact from "../Page/Contact/contact";
 import Faq from "../Page/FAQ/FAQ";
@@ -28,7 +28,7 @@ import BurgerRoute from "../Page/News/BurgerRoute";
 
 const Routes = createBrowserRouter([
   {path: "/", element:<App />, children:[
-{path: "/about", element:<AboutPage />},
+{path: "/about", element:<About />},
 {path: "/contact", element:<Contact />},
 {path: "/faq", element:<Faq />},
 {path: "/reservation", element:<Reservation />},
