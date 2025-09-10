@@ -1,0 +1,68 @@
+1. ---- header -----
+2. header import to app
+3. Product --- product fillter
+4. Myweb looading --- login and then unser and pass to web on
+5. spain page then chorki r moto oita
+
+
+
+
+1. checkoutpage ---end (start --- Privecy policy page , therms of use page, order summery, input filed red signal erro, remind me page, heanding free te i marks)
+2. reservation --- end
+3. about --- end 
+5. Faq page --- end
+6. Aboutuspage --- end
+7. homepage --- end (routes)
+8. Team --- end
+9. Help Chenter --- end (submit ticket routes)
+10. Profile --- end
+11. News --- end
+12. singlepost --- end
+13. privacy & theme page --- end
+14. prement gateway system
+
+
+
+
+
+--------------ajke mision----------------
+12. find store --- start
+13. Blog Details --- start
+14. homepage er routes 
+16. homepage --- active all cokies box + end slider wrong solved...
+17. homepage javascript use sidebar +
+18. page + graphchat join
+19. loginpage no text ---- error page create
+20. kiso add function system
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fb post:
+আলহামদুলিল্লাহ্ ২ মাসের মধ্যে আমি রেস্টুরেন্ট প্রজেক্ট শেষ করলাম
+
+👉 **Live Demo:**
+
+(https://kawsar-restaurant-projects.netlify.app//)
+
+
+

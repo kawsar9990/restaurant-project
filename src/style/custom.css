@@ -1,0 +1,8 @@
+.hightlight-color::selection{
+     background: #E9004B !important;
+     color: white !important;
+}
+.focus:focus{
+     box-shadow: 0 0 15px orange;
+     outline: none;
+}
