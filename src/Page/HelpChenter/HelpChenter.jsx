@@ -38,7 +38,7 @@ useEffect(()=>{
                : "0 0px 0px rgba(0,0,0,0)",
           }}
           style={{fontFamily: "Poppins, sans-serif"}}
-           className="flex fixed top-0 left-0 right-0 bg-blue-50 w-full p-2 items-center justify-between z-50">
+           className="flex hightlight-color fixed top-0 left-0 right-0 bg-blue-50 w-full p-2 items-center justify-between z-50">
 
 <h1>
     <Link to="/">

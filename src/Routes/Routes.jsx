@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 
 
 import App from "../App";
+import Home from "../Page/HomePage/Home";
 import About from '../Page/AboutPage/AboutPage'
 import Profile from "../Page/ProfilePage/Profile";
 import Contact from "../Page/Contact/contact";
@@ -12,6 +13,14 @@ import Team from "../Page/Team/Team";
 import SinglePost from "../Page/SinglePost/Post";
 import News from "../Page/News/News";
 import Checkout from "../Page/Checkout/CheckoutPage";
+import NotF from "../Page/RoutesPage/NotFoundPage/Notfound";
+
+
+
+
+// other page 
+import PrivacyPolicy from "../Page/RoutesPage/FooterTheme/PrivacyPolicy";
+import ThemeServics from "../Page/RoutesPage/FooterTheme/ThemeServics";
 
 
 // News Routes 
@@ -28,6 +37,7 @@ import BurgerRoute from "../Page/News/BurgerRoute";
 
 const Routes = createBrowserRouter([
   {path: "/", element:<App />, children:[
+{path: "/", element:<Home />},
 {path: "/about", element:<About />},
 {path: "/contact", element:<Contact />},
 {path: "/faq", element:<Faq />},
@@ -35,6 +45,8 @@ const Routes = createBrowserRouter([
 {path: "/team", element:<Team />},
 {path: "/checkout", element:<Checkout />},
 {path: "/post", element:<SinglePost />},
+{path: "/privacypolicy", element:<PrivacyPolicy />},
+{path: "/themeservics", element:<ThemeServics />},
 {path: "/news", element:<News />},
 {path: "/news/stawbaryroute", element:<StawbaryRoute />},
 {path: "/news/stawbarynews", element:<StawbaryNews />},
@@ -49,6 +61,9 @@ const Routes = createBrowserRouter([
 {path: "/profile", element:<Profile />},
 {path: "/helpchenter", element:<HelpChenter />},
 
+
+
+{path: "*", element:<NotF />},
 ]);
 
 export default Routes;

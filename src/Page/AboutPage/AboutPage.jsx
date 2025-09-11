@@ -8,7 +8,7 @@ import Review from "./Review"
 
 export default function About(){
      return(
-          <div style={{fontFamily: "Poppins"}}>
+          <div className="hightlight-color" style={{fontFamily: "Poppins"}}>
                <Home />
                <Servics />
                <AccoridingAbout />            

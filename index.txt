@@ -25,15 +25,14 @@
 
 
 
---------------ajke mision----------------
-12. find store --- start
-13. Blog Details --- start
-14. homepage er routes 
-16. homepage --- active all cokies box + end slider wrong solved...
-17. homepage javascript use sidebar +
-18. page + graphchat join
-19. loginpage no text ---- error page create
-20. kiso add function system
+--------------mision----------------
+homepage er routes 
+homepage --- active all cokies box + end slider wrong solved...
+homepage javascript use sidebar +
+page + graphchat join
+loginpage no text ---- error page create
+kiso add function system
+profile and contact and reservaction e js use kore from controll korbu
 
 
 
@@ -62,7 +61,7 @@ fb post:
 
 👉 **Live Demo:**
 
-(https://kawsar-restaurant-projects.netlify.app//)
+(https://kawsar-restaurent-project.netlify.app/)
 
 
 
