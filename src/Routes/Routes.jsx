@@ -18,6 +18,11 @@ import NotF from "../Page/RoutesPage/NotFoundPage/Notfound";
 
 
 
+// chat 
+import Chatgpt from "../Features/HomeMessage/Chatbot";
+
+
+
 // other page 
 import PrivacyPolicy from "../Page/RoutesPage/FooterTheme/PrivacyPolicy";
 import ThemeServics from "../Page/RoutesPage/FooterTheme/ThemeServics";
@@ -60,7 +65,7 @@ const Routes = createBrowserRouter([
 
 {path: "/profile", element:<Profile />},
 {path: "/helpchenter", element:<HelpChenter />},
-
+{path: "/chat", element:<Chatgpt />},
 
 
 {path: "*", element:<NotF />},

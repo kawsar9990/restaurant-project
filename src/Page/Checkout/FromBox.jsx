@@ -1,24 +1,380 @@
+import { useState } from "react"
+import { Link } from "react-router"
+
+
 export default function FromBox(){
+     const [frname, setfrname] = useState("")
+     const [lsname, setlsname] = useState("")
+     const [cmname, setcmname] = useState("")
+     const [crname, setcrname] = useState("")
+     const [strname, setstrname] = useState("")
+     const [strrname, setstrrname] = useState("")
+     const [tnname, settnname] = useState("")
+     const [disname, setdisname] = useState("")
+     const [phoname, setphonname] = useState("")
+     const [emaname, setemaname] = useState("")
+
+
+     const [frrname, setfrrname] = useState("")
+     const [lssname, setlssname] = useState("")
+     const [cmmname, setcmmname] = useState("")
+     const [crrname, setcrrname] = useState("")
+     const [strrrrname, setstrrrrname] = useState("")
+     const [strrrname, setstrrrname] = useState("")
+     const [ttnname, setttnname] = useState("")
+     const [disssname, setdissname] = useState("")
+
+     const [ckbox, setckbox] = useState(false)
+     const handleckbox = () => {
+          setckbox(!ckbox)
+     }
+
+
+     const inputclass ="border-2 focus:border-0  bg-[#F8F8F8] w-full p-3 md:w-120 rounded-md focus transition-transform duration-200 focus:outline-1"
+    
+    
      return(
-          <div className="p-10 bg-[#FFFFFF]">
+          <div className=" bg-[#FFFFFF]">
 
 
-          <div className="flex flex-col xl:flex-row xl:gap-10 xl:w-full xl:justify-between">
+          <div className="flex gap-5 flex-col xl:flex-row">
 
 
 <div className="shadow rounded-md p-5 w-full">
+<div className="p-2 font-black capitalize">Billing details</div>
+<div>
 
+
+<div className="flex gap-5 justify-between w-full">
+     <div className="flex flex-col gap-2">
+          <label htmlFor="fr" className="text-red-500">First name *</label>
+          <input type="text" name="fr" id="fr" 
+          value={frname}
+          onChange={(e)=> setfrname(e.target.value)}
+          className={`xl:w-60 ${inputclass} ${frname ? "border-green-500" : "border-red-500"}`}
+          />
+     </div>
+       <div className="flex flex-col gap-2">
+          <label htmlFor="ls" className="text-red-500">Last name *</label>
+          <input type="text" id="ls" name="ls"
+          value={lsname}
+          onChange={(e)=> setlsname(e.target.value)}
+          className={`xl:w-60 ${inputclass} ${lsname ? "border-green-500" : "border-red-500"}`}           />
+     </div>
+</div>
+
+<div className="flex flex-col gap-2 pt-5">
+     <label htmlFor="cs" className="text-red-500">Company name (optional)</label>
+    <input type="text"  id="cs" name="cs"  
+      value={cmname}
+     onChange={(e)=> setcmname(e.target.value)}
+     className={`${inputclass} xl:w-full ${cmname ? "border-green-500" : "border-red-500"}`}    />  
 </div>
 
 
 
-<div className="shadow rounded-md p-5 w-full">
+<div className="flex flex-col gap-2 pt-5">
+     <label htmlFor="cr" className="text-red-500">Country / Region *</label>
+    <input type="text" readOnly  id="cr" name="cr" 
+      value={crname}
+      placeholder="Sao Tome and Principe"
+          onChange={(e)=> setcrname(e.target.value)}
+          className={`${inputclass}  xl:w-full ${crname ? "border-green-500" : "border-red-500"}`}
+    />  
+</div>
+
+
+
+
+
+
+<div className="flex flex-col gap-2 pt-5">
+     <label htmlFor="str" className="text-red-500">Street address *</label>
+    <input type="text"  id="str" name="str" 
+      value={strname}
+      placeholder="House number and street name"
+          onChange={(e)=> setstrname(e.target.value)}
+          className={`${inputclass}  xl:w-full ${strname ? "border-green-500" : "border-red-500"}`}
+    />  
+    <div>
+      <input type="text"  id="str" name="str" 
+      value={strrname}
+      placeholder="Apartment, suite, unit, etc. (optional)"
+          onChange={(e)=> setstrrname(e.target.value)}
+          className={`${inputclass}  xl:w-full ${strrname ? "border-green-500" : "border-red-500"}`}
+    />  
+    </div>
+</div>
+
+
+<div className="flex flex-col gap-2 pt-5">
+     <label htmlFor="tn" className="text-red-500">Town / City *</label>
+    <input type="text"  id="tn" name="tn" 
+      value={tnname}
+          onChange={(e)=> settnname(e.target.value)}
+          className={`${inputclass}  xl:w-full ${tnname ? "border-green-500" : "border-red-500"}`}
+    />  
+</div>
+
+
+
+
+
+<div className="flex flex-col gap-2 pt-5">
+     <label htmlFor="ds" className="text-red-500">District *</label>
+    <input type="text"  id="ds" name="ds" 
+      value={disname}
+          onChange={(e)=> setdisname(e.target.value)}
+          className={`${inputclass}  xl:w-full ${disname ? "border-green-500" : "border-red-500"}`}
+    />  
+</div>
+
+
+
+
+<div className="flex flex-col gap-2 pt-5">
+     <label htmlFor="pn" className="text-red-500">Phone *</label>
+    <input type="text"  id="pn" name="pn" 
+      value={phoname}
+          onChange={(e)=> setphonname(e.target.value)}
+          className={`${inputclass}  xl:w-full ${phoname ? "border-green-500" : "border-red-500"}`}
+    />  
+</div>
+
+
+
+
+
+
+<div className="flex flex-col gap-2 pt-5">
+     <label htmlFor="em" className="text-red-500">Email address *</label>
+    <input type="email"  id="em" name="em" 
+      value={emaname}
+          onChange={(e)=> setemaname(e.target.value)}
+          className={`${inputclass}  xl:w-full ${emaname ? "border-green-500" : "border-red-500"}`}
+    />  
+</div>
+
+
+
+
 
 </div>
+</div>
+
+
+<div className="">
+<div className="p-3 cursor-pointer" style={{userSelect: "none"}}>
+     <input type="checkbox" onClick={handleckbox} name="autocl" id="autocl" />
+     <label htmlFor="autocl" className="cursor-pointer text-3xl"> Ship to a different address?</label>
+</div>
+<div className="shadow rounded-md p-5 w-full ">
+{
+     ckbox ? (
+<div>
+
+
+
+<div className="flex gap-5 justify-between w-full"> 
+
+<div className="flex flex-col gap-2">
+          <label htmlFor="frr" className="text-red-500">First name *</label>
+          <input type="text" name="frr" id="frr" 
+          value={frrname}
+          onChange={(e)=> setfrrname(e.target.value)}
+          className={`xl:w-60 ${inputclass} ${frrname ? "border-green-500" : "border-red-500"}`}
+          />
+     </div>
+       <div className="flex flex-col gap-2">
+          <label htmlFor="lss" className="text-red-500">Last name *</label>
+          <input type="text" id="lss" name="lss"
+          value={lssname}
+          onChange={(e)=> setlssname(e.target.value)}
+          className={`xl:w-60 ${inputclass} ${lssname ? "border-green-500" : "border-red-500"}`}           />
+     </div>
+     </div>
+
+     
+<div className="flex flex-col gap-2 pt-5">
+     <label htmlFor="css" className="text-red-500">Company name (optional)</label>
+    <input type="text"  id="css" name="css"  
+      value={cmmname}
+     onChange={(e)=> setcmmname(e.target.value)}
+     className={`${inputclass} xl:w-full ${cmmname ? "border-green-500" : "border-red-500"}`}    />  
+</div>
+
+
+
+<div className="flex flex-col gap-2 pt-5">
+     <label htmlFor="crr" className="text-red-500">Country / Region *</label>
+    <input type="text" readOnly  id="crr" name="crr" 
+      value={crrname}
+      placeholder="Sao Tome and Principe"
+          onChange={(e)=> setcrrname(e.target.value)}
+          className={`${inputclass}  xl:w-full ${crrname ? "border-green-500" : "border-red-500"}`}
+    />  
+</div>
+
+
+
+
+
+
+<div className="flex flex-col gap-2 pt-5">
+     <label htmlFor="strr" className="text-red-500">Street address *</label>
+    <input type="text"  id="strr" name="strr" 
+      value={strrrrname}
+      placeholder="House number and street name"
+          onChange={(e)=> setstrrrrname(e.target.value)}
+          className={`${inputclass}  xl:w-full ${strrrrname ? "border-green-500" : "border-red-500"}`}
+    />  
+    <div>
+      <input type="text"  id="strr" name="strr" 
+      value={strrrname}
+      placeholder="Apartment, suite, unit, etc. (optional)"
+          onChange={(e)=> setstrrrname(e.target.value)}
+          className={`${inputclass}  xl:w-full ${strrrname ? "border-green-500" : "border-red-500"}`}
+    />  
+    </div>
+</div>
+
+
+<div className="flex flex-col gap-2 pt-5">
+     <label htmlFor="tnn" className="text-red-500">Town / City *</label>
+    <input type="text"  id="tnn" name="tnn" 
+      value={ttnname}
+          onChange={(e)=> setttnname(e.target.value)}
+          className={`${inputclass}  xl:w-full ${ttnname ? "border-green-500" : "border-red-500"}`}
+    />  
+</div>
+
+
+
+
+
+<div className="flex flex-col gap-2 pt-5">
+     <label htmlFor="dss" className="text-red-500">District *</label>
+    <input type="text"  id="dss" name="dss" 
+      value={disssname}
+          onChange={(e)=> setdissname(e.target.value)}
+          className={`${inputclass}  xl:w-full ${disssname ? "border-green-500" : "border-red-500"}`}
+    />  
+</div>
+
+</div>
+     )
+     :(
+          <div>
+          <p>Order notes (optional)</p>
+          <div className="pt-3">
+               <textarea name="" id=""
+               className={`w-full  ${inputclass}`}
+               placeholder="Notes about your order, e.g. speacial notes for delivery"></textarea>
+          </div>
+          <div className="flex flex-col gap-2 pt-3">
+               <p className="text-2xl ">Tip your rider?</p>
+               <div className="flex justify-between gap-3 pb-3">
+                   <select className="w-full border-2 cursor-pointer rounded-md">
+                    <option value="Fixed">Fixed</option>
+                    <option value="Percentage">Percentage(%)</option>
+                    </select> 
+                    <input type="number"  id="" name="" 
+                    className={`${inputclass}`}/>
+                     </div>
+                     <div>
+                    <button className="bg-red-600 text-white hover:bg-transparent p-3 w-full text-center hover:border-red-700 rounded-md cursor-pointer hover:text-black font-black hover:border-1 ">
+                         Add Tip
+                    </button>
+                     </div>
+          </div>
+          </div>
+     )
+}
+</div>
+</div>
+
 
 
 
           </div>
+
+
+
+<div className="pt-20">
+
+<p className="p-5 font-black text-3xl">Your order</p>
+
+<div className="p-5">
+<table className="border w-full text-center">
+
+<thead className="border-2">
+     <th className="border p-2">Product</th>
+     <th className="border-2">Subtotal</th>
+</thead>
+
+<thead className="border-2">
+     <td className="border-2 p-2">Mushroom Soup  × 2</td>
+     <td className="border p-2">$42.00</td>
+</thead>
+
+
+<thead className="border-2">
+     <td className="border-2 p-2">Subtotal</td>
+     <td className="border p-2">$42.00</td>
+</thead>
+
+
+<thead className="border-2">
+     <td className="border-2 p-2">Shipping</td>
+     <td className="border p-2">Enter your address to view shipping options.</td>
+</thead>
+
+
+<thead className="border-2">
+     <td className="border-2 p-2">Tip</td>
+     <td className="border p-2">$3.00</td>
+</thead>
+
+
+<thead className="border-2">
+     <td className="border-2 p-2">Total</td>
+     <td className="border p-2">$45.00</td>
+</thead>
+
+
+
+
+</table>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div className="pt-10 w-full pb-10">
+<p className="text-gray-400">Cash on delivery</p>
+<div className="w-full bg-[#DCD7E2] h-15 p-2 text-gray-500 capitalize rounded-md  flex ">
+     Pay with cash upon delivery.
+</div>
+</div>
+
+<hr />
+
+<div className="pt-10">
+
+<p>
+     Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <Link to="/privacypolicy" className="text-red-500 font-bold" style={{textDecoration: "underline"}}>Privacy Policy</Link>
+</p>
+
+</div>
 
 
           </div>

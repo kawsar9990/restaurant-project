@@ -15,7 +15,7 @@ export default function Home(){
           <h1 className='text-2xl md:text-4xl uppercase font-bold'>About Page</h1>
           <p className='flex capitalize'>
                <Link to="/" className='text-orange-500 font-black'>
-               foodymat/
+               Kawsar.Restaurent/
           </Link>
           <Link to="about">
           About

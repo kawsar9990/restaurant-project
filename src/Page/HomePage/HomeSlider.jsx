@@ -73,7 +73,7 @@ const [sliderRef] = useKeenSlider({
 
 <div>
 
-<div ref={sliderRef} className="keen-slider   flex justify-center items-center p-3">
+<div ref={sliderRef} className="keen-slider p-3">
 {Slide.map((slide, index)=> (
   
 <div className="keen-slider__slide bg-white flex flex-col justify-center items-center  shadow p-1 rounded-md cursor-pointer"
