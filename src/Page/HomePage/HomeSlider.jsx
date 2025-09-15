@@ -26,7 +26,7 @@ export default function HomeSlider(){
 const [sliderRef] = useKeenSlider({
   loop: true,
   mode: "free-snap",
-  ltr: true,
+  ltr: false,
   slides: {
     perView: 4, 
     spacing: 15,
@@ -51,6 +51,13 @@ const [sliderRef] = useKeenSlider({
       },
     },
   },
+
+  created(s){
+    const interval = setInterval(() => {
+      s.next()
+    }, 1000);
+    return () => clearInterval(interval)
+  }
 })
    
      return(

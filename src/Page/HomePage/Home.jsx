@@ -1,6 +1,7 @@
 import Homelayout from "./homelayout"
 import Landing from "./landing"
 import MegaSale from "./MegaSale"
+import FillterHome from "../../Product/HomePage/FillterPage"
 import Gif from "./gif"
 import ChooseBox from "./ChooseBox"
 import Chef from "./Chef"
@@ -14,8 +15,9 @@ export default function Home(){
                <Homelayout />
                <Landing />
                <MegaSale />
+               <FillterHome />
                <Gif />
-                 <ChooseBox />
+               <ChooseBox />
                <Chef />
                <LatestPage />
                <Cokkies />

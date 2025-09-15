@@ -16,7 +16,7 @@ export default function Load(){
      return(
 <div>
         {load && (
- <div className='fixed inset-0 bg-black w-full h-full flex justify-center items-center min-h-screen' style={{zIndex: "100"}}>
+ <div className='fixed inset-0 bg-black w-full h-full flex justify-center items-center min-h-screen z-[9999]'>
    <img src={img} alt="Loading..." />     
     </div>
           )}

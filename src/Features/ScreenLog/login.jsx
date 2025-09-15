@@ -20,7 +20,7 @@ const passref = useRef(null)
 
 useEffect(()=> {
 const auth = localStorage.getItem("isloggedIn");
-if(!auth){
+if(auth){
      onLogin();
 }
 else{
@@ -36,14 +36,16 @@ else{
 const handlelogin = () => {
 
 
-if(!username.trim() ){
-     setError("");
-     if(inputref.current) useRef.current.focus();
+
+
+if(!username.trim()){
+    setError("Please enter username");
+     if(inputref.current) inputref.current.focus();
      return
 }
 
-if(!passref.trim() ){
-     setError("");
+if(!password.trim()){
+     setError("Please enter password");
      if(passref.current) passref.current.focus();
      return
 }
@@ -61,9 +63,8 @@ if(username === VALID_USER && password === VALID_PASS){
 }
 else{
      setError("❌ Incorrect username or password")
-     if(inputref.current){
-     inputref.current.focus()
-}
+     if(inputref.current) inputref.current.focus()
+
 }
 }
 
@@ -120,7 +121,7 @@ ref={passref}
 onKeyDown={(e)=> {
      if(e.key === "Enter"){
           e.preventDefault()
-          onLogin()
+          handlelogin()
      }
 }}
 onChange={(e)=> setPassword(e.target.value)}
