@@ -7,7 +7,7 @@ import ChooseBox from "./ChooseBox"
 import Chef from "./Chef"
 import LatestPage from "./LatestBlog"
 import Cokkies from "../../Features/ActiveCokkies/Cokkies"
-import Message from "../../Features/HomeMessage/MessageBox"
+import Message from "./MessageBox"
 
 export default function Home(){
      return(

@@ -15,7 +15,7 @@ library.add(faMessage, faPaperPlane, faBell, faXmark, faEllipsisVertical, faInbo
 import img1 from '../../../public/Myimg/1.jpeg';
 import img2 from '../../../public/Myimg/4.jpeg';
 
-export default function Chatgpt() {
+export default function Chatbody() {
   const [click, setClick] = useState(false);
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
