@@ -11,7 +11,7 @@ export default function Message(){
           <div className="fixed top-[90vh] right-2">
 
 <div>
-     <Link to="" className="p-3 bg-blue-300 rounded-full font-black">
+     <Link to="chat" className="p-3 bg-blue-300 rounded-full font-black">
  <FontAwesomeIcon icon={faInbox} />    
      </Link>
 </div>

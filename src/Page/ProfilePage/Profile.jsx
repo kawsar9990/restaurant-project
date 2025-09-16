@@ -38,14 +38,14 @@ export default function Profile(){
 
 
      return(
-    <div className="bg-blue-500 w-full flex justify-center items-center p-5">
+    <div className="bg-blue-500 w-full flex justify-center items-center min-h-screen p-5">
                
 
 
 
 
 
-<div className="bg-white shadow-lg rounded-2xl flex flex-col lg:flex-row overflow-hidden w- max-w-5xl">
+<div className="bg-white shadow-lg  rounded-2xl flex flex-col lg:flex-row overflow-hidden ">
 <div className='w-full p-5'>
 <div className="flex justify-between items-center">
           <Link to="/" className='font-black'>Kawsar.Restaurent</Link>
