@@ -12,8 +12,8 @@ import '../../style/custom.css';
 
 library.add(faMessage, faPaperPlane, faBell, faXmark, faEllipsisVertical, faInbox, faFileArrowUp, faFacebookMessenger);
 
-const img1 = '/Myimg/1.jpeg'; 
-const img2 = '/Myimg/4.jpeg'; 
+import img1 from '../../../public/Myimg/1.jpeg';
+import img2 from '../../../public/Myimg/4.jpeg';
 
 export default function Chatgpt() {
   const [click, setClick] = useState(false);
