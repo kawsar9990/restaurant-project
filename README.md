@@ -20,4 +20,4 @@ This is my awesome project 🚀
 UserName: admin;
 Password: 12345;
 
-👉 **Live Demo:** [Click Here](https://kawsar-restaurent-project.netlify.app/)
+👉 **Live Demo:** [Click Here](https://kawsar-restaurent-web.netlify.app/)

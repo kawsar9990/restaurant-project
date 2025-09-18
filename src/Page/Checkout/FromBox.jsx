@@ -1,8 +1,15 @@
 import { useState } from "react"
+import { useSelector } from "react-redux"
+
 import { Link } from "react-router"
 
 
 export default function FromBox(){
+
+     const {items, totalPrice} = useSelector(state => state.cart)
+     const [tip, setTip] = useState(0);
+
+
      const [frname, setfrname] = useState("")
      const [lsname, setlsname] = useState("")
      const [cmname, setcmname] = useState("")
@@ -278,7 +285,10 @@ export default function FromBox(){
                     <option value="Fixed">Fixed</option>
                     <option value="Percentage">Percentage(%)</option>
                     </select> 
+
                     <input type="number"  id="" name="" 
+                    value={tip}
+                    onChange={(e)=> setTip(Number(e.target.value))}
                     className={`${inputclass}`}/>
                      </div>
                      <div>
@@ -312,15 +322,26 @@ export default function FromBox(){
      <th className="border-2">Subtotal</th>
 </thead>
 
-<thead className="border-2">
-     <td className="border-2 p-2">Mushroom Soup  × 2</td>
-     <td className="border p-2">$42.00</td>
-</thead>
+
+<tbody>
+
+{items.map(item => (
+     <tr key={item.id}>
+          <td className="border p-2">
+               {item.name} ×  {item.quantity}
+          </td>
+          <td className="border p-2">
+     ${(item.price * item.quantity).toFixed(2)}
+          </td>
+     </tr>
+))}
+
+</tbody>
 
 
 <thead className="border-2">
      <td className="border-2 p-2">Subtotal</td>
-     <td className="border p-2">$42.00</td>
+     <td className="border p-2"> ${totalPrice.toFixed(2)}</td>
 </thead>
 
 
@@ -332,13 +353,13 @@ export default function FromBox(){
 
 <thead className="border-2">
      <td className="border-2 p-2">Tip</td>
-     <td className="border p-2">$3.00</td>
+     <td className="border p-2"> ${tip.toFixed(2)}</td>
 </thead>
 
 
 <thead className="border-2">
      <td className="border-2 p-2">Total</td>
-     <td className="border p-2">$45.00</td>
+     <td className="border p-2">${(totalPrice).toFixed(2)}</td>
 </thead>
 
 

@@ -14,7 +14,10 @@ import SinglePost from "../Page/SinglePost/Post";
 import News from "../Page/News/News";
 import Checkout from "../Page/Checkout/CheckoutPage";
 import NotF from "../Page/RoutesPage/NotFoundPage/Notfound";
+import Cart from "../Page/Cart/Cart";
 
+// SingleProduct 
+import SingleMain from "../Page/SingleProduct/SingleMain";
 
 
 
@@ -59,6 +62,8 @@ const Routes = createBrowserRouter([
 {path: "/news/birthroute", element:<BirthdayRoute />},
 {path: "/news/burgernews", element:<BurgerNews />},
 {path: "/news/burgerroute", element:<BurgerRoute />},
+{path: "/singlemain", element:<SingleMain />},
+{path: "/cart", element:<Cart />},
 ]},
 
 {path: "/profile", element:<Profile />},

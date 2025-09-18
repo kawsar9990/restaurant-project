@@ -6,6 +6,7 @@ import Notifaction from "./Components/Ui/fakenotifaction"
 import LoginPass from "./Features/ScreenLog/login"
 
 import Header from "./layout/Header/Header"
+import CardBox from "./layout/CartBox/CartBox"
 import Footer from "./layout/Footer/footer"
 
 
@@ -28,6 +29,9 @@ const [isloggin, setisslogin] = useState(false)
     <> 
 
  <Header />
+
+
+<CardBox />
 
 
 <div>

@@ -34,8 +34,8 @@ useEffect(()=>{
                boxShadow: scroll ? "0 4px 15px rgba(10,10,0,0.15)"
                : "0 0px 0px rgba(0,0,0,0)",
           }}
-          style={{fontFamily: "Poppins, sans-serif"}}
-           className="flex fixed top-0 left-0 right-0 bg-blue-50 w-full p-2 items-center justify-between z-[9980]">
+         style={{fontFamily: "Poppins", zIndex: 16000}}
+           className="flex fixed top-0 left-0 right-0 bg-blue-50 w-full p-2 items-center justify-between">
 
 <h1>
      <a href="#home" style={{fontFamily: "Poppins"}}  className="font-black text-2xl hover:text-blue-500">Kawsar.Resturent</a>
@@ -84,9 +84,9 @@ useEffect(()=>{
 
 <div className="absolute left-0 mt-2 w-50 bg-white text-black border rounded-md shadow-lg opacity-0 invisible  group-hover:opacity-100 group-hover:visible transition-all duration-200">
 <Link to="" className="block px-4 py-1">Shop</Link>
-<Link to="" className="block px-4 py-1">Single Product</Link>
+<Link to="singlemain" className="block px-4 py-1">Single Product</Link>
 <Link to="post" className="block px-4 py-1">Single Post</Link>
-<Link to="" className="block px-4 py-1">Cart</Link>
+<Link to="cart" className="block px-4 py-1">Cart</Link>
 <Link to="checkout" className="block px-4 py-1">Checkout</Link>
   </div>
 
@@ -178,8 +178,8 @@ className="md:hidden  text-2xl cursor-pointer">
      animate={{y: 0, opacity: 1}}
      exit={{y: "-100%", opacity: 0}}
      transition={{duration : 0.4}}
-style={{fontFamily: "Poppins"}}
-className="md:hidden fixed top-[40px] right-0  left-0 max-h-1125 pb-5 w-full bg-blue-50 shadow-lg flex flex-col pt-2 pl-2 z-[9980]"     
+style={{fontFamily: "Poppins", zIndex: 16000}}
+className="md:hidden fixed top-[40px] right-0  left-0 max-h-1125 pb-5 w-full bg-blue-50 shadow-lg flex flex-col pt-2 pl-2"     
 >
 
 <ul className="flex flex-col gap-4 text-lg" 
@@ -221,9 +221,9 @@ style={{fontFamily: "Poppins"}}>
      {shopOpen && (
             <div className="pl-4 flex flex-col gap-0">
 <Link to="" className="block px-4 py-1">Shop</Link>
-<Link to="" className="block px-4 py-1">Single Product</Link>
+<Link to="singlemain" className="block px-4 py-1">Single Product</Link>
 <Link to="post" className="block px-4 py-1">Single Post</Link>
-<Link to="" className="block px-4 py-1">Cart</Link>
+<Link to="cart" className="block px-4 py-1">Cart</Link>
 <Link to="checkout" className="block px-4 py-1">Checkout</Link>
                </div>     
      )} 

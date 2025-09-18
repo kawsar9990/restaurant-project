@@ -25,7 +25,10 @@ export default function Chatbody() {
 
 
   useEffect(() => {
-    setMessages([{ type: 'bot', text: "Hi sir, I am Engineer MD Kawsar Ahmed. And your name?" }]);
+    setMessages([{ type: 'bot', text: "Welcome  Sir, Our Kawsar.Restaurent Website." },
+      {type: 'bot', text: 'Hi Sir Iam MD Kawsar Ahmed. Restaurent Website Creator And CSE Engineer.'},
+      {type: 'bot', text: 'Tell us how we can help you ?'}
+    ]);
   }, []);
 
   const { getRootProps, getInputProps } = useDropzone({
@@ -40,20 +43,37 @@ export default function Chatbody() {
 
     setMessages(prev => [...prev, { type: 'user', text: inputMessage }]);
 
+
+
+
     if (!userName) {
-      setUserName(inputMessage);
       setMessages(prev => [...prev, 
-        { type: 'bot', text: `Nice to meet you ${inputMessage}! How can I help you?` }
+        { type: 'bot', text: `Sir or Ma'am, may I know your name?` },
       ]);
+      setUserName('pending');
       setInputMessage('');
       return;
     }
+
+
+
+
+     if (userName === 'pending') {
+      setUserName(inputMessage);
+       setMessages(prev => [...prev, 
+    { type: 'bot', text: `Nice to meet you ${inputMessage}! How can I help you?` }      ]);
+      setInputMessage('');
+      return;
+    }
+
+
 
     if (!collectEmail) {
       setCollectEmail(true);
     }
 
     setMessages(prev => [...prev, { type: 'bot', text: `I received: "${inputMessage}". How can I assist further?` }]);
+    setMessages(prev => [...prev, { type: 'bot', text: `Please give your email address so that we can contact you through it.` }]);
     setInputMessage('');
   };
 
