@@ -16,7 +16,7 @@ const [scroll , setscroll] = useState("")
 const [shopOpen , setShopOPen] = useState(false);
 const [blogOpen , setBlogOPen] = useState(false);
 const [resoOpen , setresoOPen] = useState(false);
-const [menuopen , setmenu] = useState(false);
+
 
 useEffect(()=>{
      const handlescroll = () => setscroll(window.scrollY > 10)
@@ -54,20 +54,7 @@ useEffect(()=>{
 
 
 
-<div className="relative group">
-      <button className="text-black- hover:text-blue-600 flex items-center">
-                Menu
-                <svg className="w-4 h-4 ml-1"fill="none"stroke="currentColor"viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg></button>
-
-<div className="absolute left-0 mt-2 w-57 bg-white text-black border rounded-md shadow-lg opacity-0 invisible  group-hover:opacity-100 group-hover:visible transition-all duration-200">
-<Link to="" className="block px-4 py-1">Grid By Category</Link>
-<Link to="" className="block px-4 py-1">Food Menu Grid Layout</Link>
-<Link to="" className="block px-4 py-1">Food Menu List Layout</Link>
-<Link to="" className="block px-4 py-1">Food Menu Slider Layout</Link>
-    </div>
-
-</div>
-
+<Link to="/menu" className="hover:text-blue-500">Menu</Link>
 
 
 
@@ -83,7 +70,7 @@ useEffect(()=>{
                 <svg className="w-4 h-4 ml-1"fill="none"stroke="currentColor"viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg></button>
 
 <div className="absolute left-0 mt-2 w-50 bg-white text-black border rounded-md shadow-lg opacity-0 invisible  group-hover:opacity-100 group-hover:visible transition-all duration-200">
-<Link to="" className="block px-4 py-1">Shop</Link>
+<Link to="/shop" className="block px-4 py-1">Shop</Link>
 <Link to="singlemain" className="block px-4 py-1">Single Product</Link>
 <Link to="post" className="block px-4 py-1">Single Post</Link>
 <Link to="cart" className="block px-4 py-1">Cart</Link>
@@ -190,22 +177,7 @@ style={{fontFamily: "Poppins"}}>
 
 
 
-
-<div>
-   <button
-   onClick={()=> setmenu(prev => !prev)}
-   className="flex justify-between w-full py-0  hover:text-blue-500">
-     Menu  <span>{menuopen ? "▲" : "▼"}</span></button> 
-     {menuopen && (
-            <div className="pl-4 flex flex-col gap-0">
-<Link to="" className="block px-4 py-1">Grid By Category</Link>
-<Link to="" className="block px-4 py-1">Food Menu Grid Layout</Link>
-<Link to="" className="block px-4 py-1">Food Menu List Layout</Link>
-<Link to="" className="block px-4 py-1">Food Menu Slider Layout</Link>
-               </div>     
-     )} 
-</div>
-
+<Link to="/menu" className="hover:text-blue-500">Menu</Link>
 
 
 
@@ -220,7 +192,7 @@ style={{fontFamily: "Poppins"}}>
      Shop  <span>{shopOpen ? "▲" : "▼"}</span></button> 
      {shopOpen && (
             <div className="pl-4 flex flex-col gap-0">
-<Link to="" className="block px-4 py-1">Shop</Link>
+<Link to="/shop" className="block px-4 py-1">Shop</Link>
 <Link to="singlemain" className="block px-4 py-1">Single Product</Link>
 <Link to="post" className="block px-4 py-1">Single Post</Link>
 <Link to="cart" className="block px-4 py-1">Cart</Link>

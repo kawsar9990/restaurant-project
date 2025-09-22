@@ -15,6 +15,8 @@ import News from "../Page/News/News";
 import Checkout from "../Page/Checkout/CheckoutPage";
 import NotF from "../Page/RoutesPage/NotFoundPage/Notfound";
 import Cart from "../Page/Cart/Cart";
+import Shops from "../Page/Shop/Shop";
+import Menu from "../Page/Menu/Menu";
 
 // SingleProduct 
 import SingleMain from "../Page/SingleProduct/SingleMain";
@@ -63,12 +65,15 @@ const Routes = createBrowserRouter([
 {path: "/news/burgernews", element:<BurgerNews />},
 {path: "/news/burgerroute", element:<BurgerRoute />},
 {path: "/singlemain", element:<SingleMain />},
+{path: "/shop", element:<Shops />},
+{path: "/menu", element:<Menu />},
 {path: "/cart", element:<Cart />},
 ]},
 
 {path: "/profile", element:<Profile />},
 {path: "/helpchenter", element:<HelpChenter />},
 {path: "/chat", element:<Chatbody />},
+
 
 
 {path: "*", element:<NotF />},

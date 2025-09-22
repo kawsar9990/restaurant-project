@@ -1,4 +1,4 @@
-import { Outlet } from "react-router"
+import { Outlet ,useLocation} from "react-router"
 import { useState } from "react"
 import LeaveSite from "./Components/LeavSite/LeaveSite"
 import Load from "./Components/Ui/loading"
@@ -12,6 +12,7 @@ import Footer from "./layout/Footer/footer"
 
 function App() {
 const [isloggin, setisslogin] = useState(false)
+const location = useLocation()
 
 
   return (
@@ -31,7 +32,8 @@ const [isloggin, setisslogin] = useState(false)
  <Header />
 
 
-<CardBox />
+
+{location.pathname !== '/cart' && <CardBox />}
 
 
 <div>

@@ -25,17 +25,17 @@ export default function CardBox(){
           className="bg-red-600 m-3 cursor-pointer hover:bg-gray-400  rounded-xl text-white fixed top-70" style={{zIndex : 15000}}>
 
 
-<div className="p-3">
+<div className="p-2">
 
 
 <div className="text-center">
-     <p className="text-2xl"><FontAwesomeIcon icon={faBagShopping} /></p>
+     <p className=""><FontAwesomeIcon icon={faBagShopping} /></p>
     
      <p className="pb-3 flex justify-center items-center gap-2">
      {totalQuantity } <p>Item</p> </p>
 
 
-     <p className="opacity-100 w-30 font-black bg-[#dddd] p-2 rounded-full backdrop-blur-lg">
+     <p className="opacity-100 w-20 font-black bg-[#dddd] p-2 rounded-full backdrop-blur-lg">
            ${totalPrice !== undefined ? totalPrice.toFixed(2) : 0}
           </p>
 </div>

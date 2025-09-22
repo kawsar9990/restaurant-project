@@ -10,13 +10,88 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../../style/global.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook , faInstagram , faTwitter, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+
+import { addToCart } from '../../Store/cartSlice';
+import { useDispatch } from 'react-redux';
 
 
 export default  function Sliders(){
 const [toggler, setToggler] = useState(false);   
 const [slideIndex, setSlideIndex] = useState(1);
-   
+
+const [addons, setAddons] = useState({
+  ex: false,
+  pp: false,
+  ss: false,
+  gg: false,
+  mm: false,
+  ol: false,
+})
+
+const [quantity, setquantity] = useState(1)
+
+
+const dispatch = useDispatch()
+
+
+const Bestprice = 50.00;
+
+
+const addonsPrice = {
+  ex: 5.00,
+  pp: 3.00,
+  ss: 5.00,
+  gg: 8.00,
+  mm: 6.00,
+  ol: 3.00,
+}
+
+
+const addonlevel = {
+    ex: "Extra Chese",
+    pp: "Pepperoni",
+    ss: "Sausage",
+    gg: "Grilled Chicken",
+    mm: "Mushrooms",
+    ol: "Olives",
+}
+
+
+  
+const addontotal = Object.keys(addons)
+.filter(key => addons[key])
+.reduce((acc, key)=> acc + addonsPrice[key],0)
+
+const total = (Bestprice + addontotal) * quantity;
+
+const handleAddonsChange = (e) => {
+  const {name, checked} = e.target;
+  setAddons(prev => ({ ...prev, [name]: checked}))
+}
+
+
+const handleAddtoCart = ()=> {
+  const selectAddons = Object.keys(addons)
+  .filter(key => addons[key])
+  .map(key => addonlevel[key])
+
+  const item = {
+    id: Date.now(),
+    name: "American Pizza",
+    img: img1,
+    price: Bestprice + addontotal,
+      quantity,
+      addons :selectAddons
+  }
+  dispatch(addToCart(item))
+}
+
+
+
+
+
 const imgage = [img1, img2, img3]  ;
 
 const settings = {
@@ -38,6 +113,13 @@ const settings = {
     slidesToScroll: 1,
     afterChange: (current)=> setSlideIndex(current + 1),
   };
+
+
+
+  
+
+
+
 
 
      return(
@@ -78,7 +160,7 @@ const settings = {
 
 
 
-<div className="p-5">
+<div className="p-5 flex flex-col gap-5">
     <div className='flex flex-col gap-3'>
      <p className='text-3xl font-black'>American pizza</p>
      <div className='flex gap-5 font-bold'>
@@ -94,12 +176,108 @@ const settings = {
     </div>
     <hr />
     </div>
+
+
+    <div className='shadow border-gray-400 p-3' style={{userSelect: "none"}}>
+      <p>Addons</p>
+      <div className='grid grid-cols-2 pt-5 pb-5 xl:grid-cols-3 gap-3'>
+       
+{Object.keys(addonsPrice).map((key) => (
+  <div key={key} className="cursor-pointer flex gap-3">
+
+<input
+name={key}
+id={key}
+onChange={handleAddonsChange}
+checked={addons[key]}
+type="checkbox"  />
+
+<label htmlFor={key} className='cursor-pointer font-bold'>
+{addonlevel[key]}
+</label>
+
+
+  </div>
+))}
+
+    </div>
+
+
+    <div className='flex flex-col gap-3 p-3'>
+      <p className='flex justify-between'>
+        <p className='font-bold capitalize'>Product Total</p>
+        <p>${Bestprice.toFixed(2)}</p>
+      </p>
+      <p className='flex justify-between'>
+        <p className='font-bold capitalize'>Addons Total</p>
+        <p>$ {addontotal.toFixed(2)}</p>
+      </p>
+      <hr />
+      <p className='flex justify-between'>
+        <p className='font-bold capitalize'>Totals</p>
+        <p>${total.toFixed(2)}</p>
+      </p>
+    </div>
+
+
+        <div>
+          <div className='flex gap-2'>
+            <input type="number" name="" id="" 
+            min="1"
+            value={quantity}
+            onChange={(e)=> setquantity(Number(e.target.value))}
+            className='border-1 p-2 w-20 rounded-md border-gray-300'
+            />
+            <button 
+            onClick={handleAddtoCart}
+            className='bg-red-500 p-2 w-50 text-white font-bold cursor-pointer rounded-md'>
+              Add To Cart</button>
+          </div>
+        </div>
+
+
+<div className='pt-5'>
+  <div className='flex gap-3'>
+    <p className='font-bold'>Categories:</p>
+    <p><Link className='hover:text-red-500'>Chinese,</Link></p>
+     <p><Link className='hover:text-red-500'>Pizza</Link></p>
+  </div>
+</div>
+
+
+
+<div className="">
+  <div className='flex gap-3 items-center'>
+    <p>Share: </p>
+    <div className='flex gap-2'>
+      <Link to="" className='hover:bg-orange-500 p-2  hover:rounded-full'>
+          <FontAwesomeIcon icon={faFacebook} />
+         </Link>
+          <Link to="" className='hover:bg-orange-500 p-2   hover:rounded-full'>
+            <FontAwesomeIcon icon={faTwitter} />
+         </Link>
+          <Link to="" className='hover:bg-orange-500 p-2   hover:rounded-full'>
+            <FontAwesomeIcon icon={faLinkedin} />
+         </Link>
+         <Link to="" className='hover:bg-orange-500 p-2   hover:rounded-full'>
+           <FontAwesomeIcon icon={faInstagram} />
+         </Link>
+    </div>
+  </div>
 </div>
 
 
 
 </div>
 
+
+
+
+
+</div>
+
+
+          </div>
 
           </div>
      )

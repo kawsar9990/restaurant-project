@@ -2,9 +2,10 @@ import { Link } from 'react-router'
 import img1 from '../../../public/Image/5.jpg'
 
 import Sliders from './SingleSlider'
+import Description from './Description'
 import RelatedProduct from './RelatedProduct'
 
-export default function singlemain(){
+export default function Singlemain(){
      return(
           <div style={{fontFamily: "Poppins"}}>
             
@@ -50,7 +51,9 @@ export default function singlemain(){
 
 
 
-
+<div>
+<Description />
+</div>
 
 
 <div>

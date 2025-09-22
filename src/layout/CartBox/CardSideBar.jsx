@@ -104,7 +104,14 @@ export default function CartSidebar({closesidebar}){
 
 
 <div className="flex gap-5">
-<button className="bg-[#EFEFF4] rounded-md text-black font-black cursor-pointer p-3 w-full">View Cart</button>
+
+
+<button className="bg-[#EFEFF4] rounded-md text-black font-black cursor-pointer p-3 w-full">
+    <Link to="/cart">
+     View Carts
+    </Link>
+     </button>
+
 <button className="bg-red-500 rounded-md text-white font-black cursor-pointer p-3 w-full">
    <Link to="/checkout">
    Checkout
@@ -129,10 +136,3 @@ export default function CartSidebar({closesidebar}){
       </div>
      )
 }
-//      <div key={item.id} className="border-b p-2 flex gap-2">
-//     <div className="flex-1">
-// <div className="flex gap-2 mt-1 items-center">
-//      <button onClick={()=> dispatch(decrement(item.id))} className="px-2 bg-gray-200 rounded">-</button>
-//      <span>{item.quantity}</span>
-//      <button onClick={()=> dispatch(increment(item.id))} className="px-2 bg-gray-200 rounded">+</button>
-//     <button onClick={()=> dispatch(removeCart(item.id))} className="text-red-500 ml-2">Remove</button>

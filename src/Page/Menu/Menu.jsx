@@ -1,14 +1,12 @@
 import { Link } from 'react-router'
 
 
-import CartBox from './CartBox'
+import MenuItem from './MenuItem'
 
-
-export default function Cart(){
+export default function Menu(){
      return(
 
-          <div>
-
+  
 
 
 
@@ -20,13 +18,13 @@ export default function Cart(){
 
 <div className=''>
      <div className='bg-[#FFF6F7] text-black p-20'>
-          <h1 className='text-2xl md:text-4xl uppercase font-bold'>Cart</h1>
+          <h1 className='text-2xl md:text-4xl uppercase font-bold'>Shop</h1>
           <p className='flex capitalize'>
                <Link to="/" className='text-orange-500 font-black'>
                Kawsar.Restaurent/
           </Link>
           <Link to="">
-          Cart
+          Shop
           </Link>
           </p>
      </div>
@@ -37,10 +35,9 @@ export default function Cart(){
 
 
 
-<div className="bg-white p-5">
+<div className="bg-white p-10">
 
-
-<CartBox />
+<MenuItem />
 
 
 </div>
@@ -56,7 +53,6 @@ export default function Cart(){
 
 
 
-          </div>
 
        
      )

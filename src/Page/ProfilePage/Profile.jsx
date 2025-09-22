@@ -1,7 +1,4 @@
 import { Link } from 'react-router';
-import img4 from '../../../public/Image/download.svg'
-import img5 from '../../../public/Image/download (2).svg'
-
 import { useState} from 'react';
 
 
@@ -45,14 +42,14 @@ export default function Profile(){
 
 
 
-<div className="bg-white shadow-lg  rounded-2xl flex flex-col lg:flex-row overflow-hidden ">
+<div className="bg-white shadow-lg w-100  rounded-2xl flex flex-col lg:flex-row overflow-hidden ">
 <div className='w-full p-5'>
-<div className="flex justify-between items-center">
+<div className="flex justify-between items-center w-full gap-5">
           <Link to="/" className='font-black'>Kawsar.Restaurent</Link>
         
         <button 
          onClick={()=> setlogin(!login)}
-        className='hover:text-green-500 font-bold cursor-pointer'>
+        className='hover:text-green-500 text-[10px] md:text-[20px] font-bold cursor-pointer'>
                {login ? "login" : "Create an account"}
         </button>
         
@@ -61,26 +58,10 @@ export default function Profile(){
 
      <div>
           <div className='flex flex-col'>
-               <a href="#" className='text-center pt-5 font-black text-[20px]'>{login ? "Sign Up" : "login"}</a>
-               <p className='text-center pt-3 text-gray-500 capitalize'>Enter to Improve Your Sleep and Bring Peace to Your Life</p>
-          </div>
+               <a href="#" className='text-center pt-5 font-black text-[20px]'>{login ? "Sign Up" : "login"}</a>          </div>
           
           <div className='pt-7 flex flex-col gap-5'>
-               <div className='border-1 cursor-pointer rounded-md border-gray-400 p-2 flex gap-5 justify-center'>
-               <img src={img4} alt="" className='w-5'/>
-               <p>Sign in With Google</p>
-               </div>
-
-               <div className='border-1 cursor-pointer rounded-md border-gray-400 p-2 flex gap-5 justify-center'>
-               <img src={img5} alt="" className='w-5'/>
-               <p>Sign in With Facebook</p>            
-               </div>
-
-               <div className='flex flex-row gap-5 justify-center'>
-                  <h1>------------- </h1>
-                    <p className='font-black text-center'> Or</p>
-                   <h1>------------</h1>
-               </div>
+              
 
 
 {

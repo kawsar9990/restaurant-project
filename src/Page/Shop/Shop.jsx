@@ -1,18 +1,10 @@
-import { Link } from 'react-router'
 
+import { Link } from "react-router"
+import ShopItem from "./shopitem"
 
-import CartBox from './CartBox'
-
-
-export default function Cart(){
+export default function Shops(){
      return(
-
-          <div>
-
-
-
-
-   <div className="bg-white">
+          <div className="bg-white">
 
 <div className="pt-10">
 
@@ -20,29 +12,21 @@ export default function Cart(){
 
 <div className=''>
      <div className='bg-[#FFF6F7] text-black p-20'>
-          <h1 className='text-2xl md:text-4xl uppercase font-bold'>Cart</h1>
+          <h1 className='text-2xl md:text-4xl uppercase font-bold'>Shop Page</h1>
           <p className='flex capitalize'>
                <Link to="/" className='text-orange-500 font-black'>
                Kawsar.Restaurent/
           </Link>
           <Link to="">
-          Cart
+          Shop Page
           </Link>
           </p>
      </div>
 </div>
 
 
-
-
-
-
-<div className="bg-white p-5">
-
-
-<CartBox />
-
-
+<div>
+     <ShopItem />
 </div>
 
 
@@ -51,13 +35,5 @@ export default function Cart(){
 </div>
 
           </div>
-
-
-
-
-
-          </div>
-
-       
      )
 }

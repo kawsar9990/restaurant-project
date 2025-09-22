@@ -22,12 +22,12 @@ export default function Servics(){
 
 <div className="shadow p-3 rounded-md flex flex-col gap-3">
 <p className="text-2xl"><FontAwesomeIcon icon={faUtensils} /></p>
-<Link to="" className="font-black ">Breakfast</Link>
+<Link to="/menu" className="font-black ">Breakfast</Link>
 <p className="text-gray-500">
      Food is not just a source of sustenance; it is an experience that engages all the senses and brings people together.
 </p>
 <button className="p-3">
-     <Link to=""  className= ' border rounded-4xl border-orange-500 hover:text-white hover:bg-orange-600 p-3 '>
+     <Link to="/menu"  className= ' border rounded-4xl border-orange-500 hover:text-white hover:bg-orange-600 p-3 '>
      See Food Menu
      </Link>
 </button>
@@ -35,12 +35,12 @@ export default function Servics(){
 
 <div className="shadow p-3 rounded-md flex flex-col gap-3">
 <p className="text-2xl"><FontAwesomeIcon icon={faCartShopping} /></p>
-<Link to="" className="font-black ">Lunch</Link>
+<Link to="/menu" className="font-black ">Lunch</Link>
 <p className="text-gray-500">
      Food is not just a source of sustenance; it is an experience that engages all the senses and brings people together.
 </p>
 <button className="p-3">
-     <Link to=""  className= ' border rounded-4xl border-orange-500 hover:text-white hover:bg-orange-600 p-3 '>
+     <Link to="/menu"  className= ' border rounded-4xl border-orange-500 hover:text-white hover:bg-orange-600 p-3 '>
      See Food Menu
      </Link>
 </button>
@@ -49,12 +49,12 @@ export default function Servics(){
 
 <div className="shadow p-3 rounded-md flex flex-col gap-3"s>
 <p className="text-2xl"><FontAwesomeIcon icon={faStore} /></p>
-<Link to="" className="font-black ">Dinner</Link>
+<Link to="/menu" className="font-black ">Dinner</Link>
 <p className="text-gray-500">
      Food is not just a source of sustenance; it is an experience that engages all the senses and brings people together.
 </p>
 <button className="p-3">
-     <Link to=""  className= ' border rounded-4xl border-orange-500 hover:text-white hover:bg-orange-600 p-3 '>
+     <Link to="/menu"  className= ' border rounded-4xl border-orange-500 hover:text-white hover:bg-orange-600 p-3 '>
      See Food Menu
      </Link>
 </button>
@@ -64,12 +64,12 @@ export default function Servics(){
 
 <div className="shadow p-3 rounded-md flex flex-col gap-3">
 <p className="text-2xl"><FontAwesomeIcon icon={faShop} /></p>
-<Link to="" className="font-black ">Custom</Link>
+<Link to="/menu" className="font-black ">Custom</Link>
 <p className="text-gray-500">
      Food is not just a source of sustenance; it is an experience that engages all the senses and brings people together.
 </p>
 <button className="p-3">
-     <Link to=""  className= ' border rounded-4xl border-orange-500 hover:text-white hover:bg-orange-600 p-3 '>
+     <Link to="/menu"  className= ' border rounded-4xl border-orange-500 hover:text-white hover:bg-orange-600 p-3 '>
      See Food Menu
      </Link>
 </button>
