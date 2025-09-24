@@ -88,7 +88,7 @@ export default function RelatedProduct(){
 {product.map(products => (
      <div className='text-center shadow-xl rounded-md group overflow-hidden'>
 <div className='overflow-hidden'>
-     <img src={products.img} alt="" className='object-cover transition-transform duration-200 group-hover:scale-110 overflow-hidden cursor-pointer rounded-md w-full'/>
+     <img src={products.img} alt="" className='object-cover transition-transform duration-200 h-50 group-hover:scale-110 overflow-hidden cursor-pointer rounded-md w-full'/>
 </div>
 
 <div className="p-10">
@@ -100,7 +100,7 @@ export default function RelatedProduct(){
 ))}
      </p>
 
-     <p className='pt-5 font-bold  text-2xl capitalize'><Link to="">{products.name}</Link></p>
+     <p className='pt-5 font-bold  text-[20px] capitalize'><Link to="">{products.name}</Link></p>
      <p className='flex justify-center gap-2 text-gray-400 pb-3 pt-3'><p>{products.RatingStar}</p>{products.RatingPoints}</p>
      <p className='text-gray-500'>Lorem ipsum dolor sit amet consectetur. Habitasse metus urna...</p>
      <p className='pt-5 flex justify-center gap-3 items-center'><p className='text-[15px] line-through text-gray-400'>${products.offPtice}</p><p className='text-black font-bold text-2xl'>${products.price}</p></p>

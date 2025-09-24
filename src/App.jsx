@@ -3,7 +3,9 @@ import { useState } from "react"
 import LeaveSite from "./Components/LeavSite/LeaveSite"
 import Load from "./Components/Ui/loading"
 import Notifaction from "./Components/Ui/fakenotifaction"
+
 import LoginPass from "./Features/ScreenLog/login"
+
 
 import Header from "./layout/Header/Header"
 import CardBox from "./layout/CartBox/CartBox"
@@ -11,47 +13,50 @@ import Footer from "./layout/Footer/footer"
 
 
 function App() {
-const [isloggin, setisslogin] = useState(false)
-const location = useLocation()
+
+  const [islogin, setislogin] = useState(false)
+  const location = useLocation()
 
 
-  return (
- <div>
+return(
+  <div>
 
-  <LeaveSite />
- <Notifaction />
-    <Load />
+<LeaveSite />
+<Notifaction />
+<Load />
+
+<div>
+
+{
+  !islogin ? (
+    <LoginPass onlogin={()=> setislogin(true)}/>
+  ): (
 
 <>
-{
-  !isloggin ? (
-    <LoginPass onLogin={() => setisslogin(true)} />
-  ) : (
-    <> 
-
- <Header />
+<Header />
 
 
 
 {location.pathname !== '/cart' && <CardBox />}
 
-
 <div>
- <Outlet /> 
+<Outlet />
 </div>
 
 <Footer />
 
-
-    </>
-  )
-}
 </>
-
-
- 
- </div>
   )
 }
 
-export default App
+</div>
+
+
+
+
+  </div>
+)
+ 
+}
+
+export default App;

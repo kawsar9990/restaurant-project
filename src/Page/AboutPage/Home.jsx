@@ -1,10 +1,22 @@
 import { Link } from 'react-router'
 import img1 from '../../../public/Image/5.jpg'
 
+
+
+import { motion, AnimatePresence } from "framer-motion";
+
+
 export default function Home(){
      return(
-          <div style={{fontFamily: "Poppins"}}>
-            
+        <AnimatePresence>
+
+<motion.div
+style={{fontFamily: "Poppins"}}
+initial={{opacity: 0, y: -50}}
+animate={{opacity: 1, y: 0}}
+transition={{duration: 0.8}}
+>
+       
           <div className='pt-10'>
 
 <div>
@@ -26,6 +38,15 @@ export default function Home(){
 
           </div>
 
-          </div>
+      
+
+
+
+
+</motion.div>
+
+
+
+        </AnimatePresence>
      )
 }

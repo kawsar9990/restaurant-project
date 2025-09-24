@@ -5,12 +5,8 @@ import img4 from '../../../public/Image/dd.jpeg'
 import img5 from '../../../public/Image/ii.jpg'
 import img6 from '../../../public/Image/dd.jpg'
 
-
-
-
-
 import FsLightbox from "fslightbox-react";
-
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from 'react'
 
 
@@ -50,7 +46,13 @@ const [toggler, setToggler] = useState(false);
 
 
 
-<div className="bg-white p-10">
+
+<motion.div
+       initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+className='bg-white p-10'>
 <div className='grid cursor-pointer gap-5 grid-cols-2 lg:grid-cols-3'>
      {img.map((x,i)=>(
      <div key={i} onClick={() => setToggler(!toggler)}>
@@ -59,6 +61,9 @@ const [toggler, setToggler] = useState(false);
 ))}
 <FsLightbox  toggler={toggler} sources={img}/>
 </div>
+</motion.div>
+<div >
+
 </div>
 
 

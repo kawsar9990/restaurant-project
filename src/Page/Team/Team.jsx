@@ -140,7 +140,7 @@ export default function Team() {
               height="250"
               src="https://www.youtube.com/embed/xPPLbEFbCAo?si=YCtRON0iA0fUbd_V"
               title="YouTube video player"
-              frameBorder="0"
+            
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen

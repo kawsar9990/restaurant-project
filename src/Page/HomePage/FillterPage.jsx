@@ -21,6 +21,7 @@ import { Link } from 'react-router'
 
 
 
+
 export default function FillterHome(){
     
 const dispatch = useDispatch()
@@ -118,10 +119,16 @@ const dispatch = useDispatch()
 
 
 <Tabs>
-    <TabList className={`flex justify-evenly font-bold cursor-pointer`}>
-      {filtercategory.map((cat, i)=> (
-      <Tab key={i} className={`hover:bg-orange-600 hover:text-white text-orange-600 outline-1 p-2 rounded-3xl w-20 text-center `}> {cat} </Tab>
-      ))}
+    <TabList className={`flex justify-evenly  font-bold cursor-pointer`}>
+      {filtercategory.map((cat, i) => (
+      <Tab
+        key={i}
+        className="border border-red-600 text-red-600 p-2 w-20 text-center rounded-full hover:text-white hover:bg-red-600 transition"
+        selectedClassName="bg-red-600 text-white border-red-600 rounded-full"
+      >
+        {cat}
+      </Tab>
+    ))}
     </TabList>
 
 

@@ -39,7 +39,7 @@ export default  function Description(){
      setnewReview({...newReview, [name]: value})
     }
 
-    const handleRatingChange = (e, value) => {
+    const handleRatingChange = (value) => {
      setnewReview({...newReview, rating: value})
     }
   

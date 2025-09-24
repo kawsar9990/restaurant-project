@@ -9,7 +9,8 @@ import img8 from '../../../public/Image/product-22-min.jpg'
 
 import { addToCart } from '../../Store/cartSlice'
 import { useDispatch } from 'react-redux'
-
+import Swal from 'sweetalert2'
+import { motion } from 'framer-motion'
 
 export default function Dinner(){
      
@@ -100,6 +101,20 @@ export default function Dinner(){
          
      ]
      
+      const handleOrder = (product) => {
+          disptach(addToCart(product))
+          Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: `${product.name} Add To Cart!`,
+          showConfirmButton: false,
+          timer: 1500,
+          customClass: {
+                popup: "rounded-lg shadow-lg bg-white mt-10 w-10",
+                title: "text-gray-800 font-semibold w-full",
+          }
+});
+     }
      
      
      
@@ -113,7 +128,16 @@ export default function Dinner(){
 
 
 
-<div className='grid grid-cols-1 sm:grid-cols-2 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+
+<motion.div
+ initial={{ opacity: 0, scale: 0.95 }}
+whileInView={{ opacity: 1, scale: 1 }}
+transition={{ duration: 0.8 }}
+viewport={{ once: true }}
+ className='grid grid-cols-1 sm:grid-cols-2 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+
+
+
 
 {item.map((item)=> (
      <div key={item.id} className='group cursor-pointer flex flex-col rounded-lg shadow-lg'>
@@ -137,7 +161,7 @@ export default function Dinner(){
 
      <div className=''>
      <button 
-     onClick={()=> disptach(addToCart(item))}
+     onClick={()=> handleOrder(item)}
      className='rounded-full border p-2 border-orange-400 text-orange-500 w-30 font-semibold cursor-pointer hover:text-black hover:bg-orange-500'>
           Order Now
      </button>
@@ -150,7 +174,12 @@ export default function Dinner(){
      </div>
 ))}
 
-</div>
+
+
+
+</motion.div>
+
+
 
 
 
