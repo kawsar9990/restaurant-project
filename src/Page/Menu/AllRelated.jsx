@@ -17,6 +17,11 @@ import img13 from '../../../public/Image/catg-pasta.png'
 import img14 from '../../../public/Image/catg-pizza.png'
 
 
+import { useState} from 'react'
+import { useNavigate } from 'react-router'
+
+import { FadeLoader } from "react-spinners";
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -26,6 +31,16 @@ library.add(faCartShopping)
 
 
 export default function MenuAllRelated(){
+    const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
+
+   const handleLoading  = (url) => {
+     setLoading(true);
+     setTimeout(() => {
+        setLoading(false)  
+        navigate(url)
+     }, 4000);
+   }
   
      
 const item = [
@@ -201,7 +216,18 @@ const reletedItem = getItem(
 
      return(
          <div className='bg-white' style={{fontFamily: 'Poppins'}}>
-        
+
+
+
+{loading && (
+     <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-black/30 z-50">
+           <FadeLoader color="#f97316" />
+     </div>
+)}
+
+ 
+
+
         <div className="p-5">
         
         <p className='font-bold text-3xl pb-10'>Related products</p>
@@ -233,7 +259,7 @@ const reletedItem = getItem(
              <p className='flex justify-center gap-2 text-gray-400 pb-3 pt-3'><p>{products.RatingStar}</p>{products.RatingPoints}</p>
              <p className='text-gray-500'>Lorem ipsum dolor sit amet consectetur. Habitasse metus urna...</p>
              <p className='pt-5 flex justify-center gap-3 items-center'><p className='text-[15px] line-through text-gray-400'>${products.oldprice}</p><p className='text-black font-bold text-2xl'>${products.price}</p></p>
-             <button>
+             <button onClick={handleLoading}>
               <Link to={`/menu`} 
                className='flex justify-center outline w-full font-bold text-orange-500 hover:bg-orange-600 hover:text-white hover:outline-0 cursor-pointer mt-5 outline-orange-600 p-3 rounded-3xl '>
                <p><FontAwesomeIcon icon={faCartShopping} /></p><p>Add To Cart</p>

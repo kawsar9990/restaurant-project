@@ -30,7 +30,7 @@ export default function CartSidebar({closesidebar}){
      </div>
 
      <div className="flex gap-2 items-center">
-     <p onClick={()=> dispatch(clearCart())} className="text-gray-400 hover:text-red-500" style={{textDecoration: "underline"}}>Clear All</p>
+     <p onClick={()=> dispatch(clearCart())} className="text-gray-400 cursor-pointer hover:text-red-500" style={{textDecoration: "underline"}}>Clear All</p>
      <p onClick={closesidebar}><FontAwesomeIcon icon={faXmark} className="hover:text-red-500 rounded text-gray-500 bg-amber-50 p-2 text-xl"/></p>
      </div>
 </div>

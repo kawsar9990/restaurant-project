@@ -9,11 +9,14 @@ import img9 from '../../../public/Image/product-13-min-200x200.jpg'
 
 
 
+import { FadeLoader } from "react-spinners";
 
 
 // import img4 from '../../../public/Image/hhh.jpg'
 // import img4 from '../../../public/Image/hhh.jpg'
 
+import { useState } from 'react'
+import { useNavigate } from 'react-router'
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Link } from 'react-router'
@@ -22,7 +25,17 @@ import { Link } from 'react-router'
 
 
 export default function FillterHome(){
-    
+  
+   const navigate = useNavigate();
+   const [loading, setLoading] = useState(false);
+
+   const handleLoading  = (url) => {
+     setLoading(true);
+     setTimeout(() => {
+        setLoading(false)  
+        navigate(url)
+     }, 5000);
+   }
 
 
 
@@ -94,6 +107,14 @@ export default function FillterHome(){
   return(
           <div className="bg-white">
 
+{loading && (
+     <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-black/30 z-50">
+           <FadeLoader color="#f97316" />
+     </div>
+)}
+
+
+
 <div className="pt-10">
 
 
@@ -118,12 +139,12 @@ export default function FillterHome(){
 
 
 <Tabs>
-    <TabList className={`flex justify-evenly gap-2 p-1  font-bold cursor-pointer`}>
+    <TabList onClick={handleLoading} className={`flex justify-evenly gap-2 p-1  font-bold cursor-pointer`}>
       {filtercategory.map((cat, i) => (
       <Tab
         key={i}
         className="border border-red-600 text-red-600 p-2 w-20 text-center rounded-full hover:text-white hover:bg-red-600 transition"
-        selectedClassName="bg-red-600 text-white border-red-600 rounded-full"
+        selectedClassName="bg-red-600 text-white border border-red-600 rounded-full"
       >
         {cat}
       </Tab>
@@ -162,7 +183,7 @@ export default function FillterHome(){
       <div className='p-5 xl:p-0'>
         <div className='flex flex-col text-center gap-5 justify-center xl:justify-start xl:gap-5 xl:pt-5'>
           <p className='flex gap-2 justify-center'><span className='items-end flex text-gray-400 line-through'>${p.oldPrice}</span><span className='font-black text-2xl'>${p.price}</span></p>
-          <button><Link to="/menu"className={`hover:bg-orange-600 hover:text-white text-orange-600 outline-1 p-2 rounded-3xl w-20 text-center `}>Order Now</Link></button>
+          <button onClick={()=> handleLoading("/menu")}><Link to="/menu" className={`hover:bg-orange-600 hover:text-white text-orange-600 outline-1 p-2 rounded-3xl w-20 text-center `}>Order Now</Link></button>
         </div>
       </div>
   </div>

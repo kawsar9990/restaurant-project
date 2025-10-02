@@ -8,6 +8,7 @@ import Chef from "./Chef"
 import LatestPage from "./LatestBlog"
 import Cokkies from "../../Features/ActiveCokkies/Cokkies"
 import Message from "./MessageBox"
+import Spin from "./spinRoute"
 
 export default function Home(){
      return(
@@ -22,6 +23,7 @@ export default function Home(){
                <LatestPage />
                <Cokkies />
                <Message />
+               <Spin />
           </div>
      )
 }

@@ -350,7 +350,7 @@ If you want, I can also rewrite this into a slightly more storytelling style to 
 
  <div className='pb-10'>
                {product.slice(6,12).map((item) => (
-                    <div className="pt-5">
+                    <div className="pt-5" onClick={()=> setselectpost(item)}>
 
 <a href='#top'>
 <div className='flex gap-3 justify-start items-center'>

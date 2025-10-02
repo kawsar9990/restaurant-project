@@ -7,14 +7,27 @@ import breakfast6 from '../../../public/Image/product_details_1_1-305x300.png'
 import breakfast7 from '../../../public/Image/product-11-min.jpg'
 import breakfast8 from '../../../public/Image/product-12-min-200x200.jpg'
 
+import { useState} from 'react'
+import { useNavigate } from 'react-router'
 
+import { FadeLoader } from "react-spinners";
 
 import { motion } from 'framer-motion'
 import { Link } from 'react-router'
 
 
 export default function Breakfast(){
-     
+       const navigate = useNavigate();
+   const [loading, setLoading] = useState(false);
+
+   const handleLoading  = (url) => {
+     setLoading(true);
+     setTimeout(() => {
+        setLoading(false)  
+        navigate(url)
+     }, 4000);
+   }
+  
      
      
      const item = [
@@ -118,6 +131,19 @@ export default function Breakfast(){
      return(
           <div className="bg-white ">
 
+
+
+
+{loading && (
+     <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-black/30 z-50">
+           <FadeLoader color="#f97316" />
+     </div>
+)}
+
+
+
+
+
 <div>
 
 <p className="text-center font-black text-3xl pb-15 pt-30">Breakfast</p>
@@ -156,7 +182,7 @@ viewport={{ once: true }}
      <p className='flex gap-2 items-center'><p className='text-black font-bold text-[20px]'>${item.price}</p><p className='line-through text-gray-300'>${item.oldprice}</p></p>
 
      <div className=''>
-     <button 
+     <button onClick={handleLoading}
      className='rounded-full border p-2 border-orange-400 text-orange-500 w-30 font-semibold cursor-pointer hover:text-black hover:bg-orange-500'>
          <Link to={`/menu/menuorder/${item.id}`}>
           Order Now

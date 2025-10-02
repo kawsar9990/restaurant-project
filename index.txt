@@ -1,13 +1,10 @@
 
 --------------mision----------------
-spain page then chorki r moto oita + graphchat + qrcode + 
-menu page plus item system jno je kew item jok korte pare aita localstroage e joma hobe +
-add to cupon ase aita kiso code joma thakbe jodi mile jai tahole spain korar page e niya jabe +
-+ menu bar e page er jonno blogsinpost er moto akta page banabu jeitai coment korte parbe ar sathe releted post thakbe ar ki single post er dupkicate hobe+
-jkn cuppon e kiso number bosai dibu jodi number mile jai tahole free spain pabe ta cara spain pabe ar cuppo er number gula menu bar e sob item e thakbe +
-ar menu bar e item kinar por automatice alert show korbe tkn cuppon number show korbe ar menu box e spain box o thakbe jeita click korle sathe sathe cuppon code cabe jodi mile jai tahole spin page e dukhabe
 
 checkout page theke location oita select korte hobe
+
+
+
 
 net connection and unconnection aita niya akta box banabu
 

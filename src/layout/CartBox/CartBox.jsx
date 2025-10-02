@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { faBagShopping, faXmark,} from "@fortawesome/free-solid-svg-icons"
-import { Link } from "react-router"
 import { useSelector } from "react-redux"
 import CartSidebar from "./CardSideBar"
 import { useState } from "react"
+import Draggable from "react-draggable" 
 
 library.add(faBagShopping, faXmark)
 
@@ -18,7 +18,9 @@ export default function CardBox(){
      return(
      <div>
      
-          <div 
+      <Draggable>
+
+      <div 
           
           onClick={()=> setIsOpen(true)}
 
@@ -44,6 +46,9 @@ export default function CardBox(){
 </div>
 
           </div>
+          
+      </Draggable>
+    
      
      {isOpen && (
           <CartSidebar closesidebar={()=> setIsOpen(false)}/>

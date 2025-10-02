@@ -30,7 +30,10 @@ import img29 from '../../../public/Image/product-22-min.jpg'
 import img30 from '../../../public/Image/product-21-min-150x150.jpg'
 
 
-import { useState } from 'react'
+import { useState} from 'react'
+import { useNavigate } from 'react-router'
+
+import { FadeLoader } from "react-spinners";
 import { motion } from 'framer-motion'
 import { Link } from 'react-router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -50,7 +53,17 @@ function valuetext(value) {
 
 
 export default function ShopMain(){
-     
+      const navigate = useNavigate();
+   const [loading, setLoading] = useState(false);
+
+   const handleLoading  = (url) => {
+     setLoading(true);
+     setTimeout(() => {
+        setLoading(false)  
+        navigate(url)
+     }, 4000);
+   }
+   
  
 
     
@@ -450,6 +463,18 @@ export default function ShopMain(){
 
  <div className="bg-white ">
 
+
+
+{loading && (
+     <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-black/30 z-50">
+           <FadeLoader color="#f97316" />
+     </div>
+)}
+
+
+
+
+
 <div className="pt-10">
 
 
@@ -536,7 +561,7 @@ viewport={{ once: true }}
       </span>
     </div>
 
-    <button  className="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition cursor-pointer">
+    <button onClick={handleLoading}  className="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition cursor-pointer">
       <Link to={`/shop/shoproute/${product.id}`}>
       Add to Cart
       </Link>

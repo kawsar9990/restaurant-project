@@ -27,7 +27,10 @@ import "slick-carousel/slick/slick-theme.css";
 import '../../style/global.css'
 import Swal from "sweetalert2";
 
-import { useState} from "react";
+import { useState} from 'react'
+import { useNavigate } from 'react-router'
+
+import { FadeLoader } from "react-spinners";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -40,6 +43,17 @@ export default function Shoproute(){
 const [toggler, setToggler] = useState(false);   
 const [slideIndex, setSlideIndex] = useState(1);
 
+  const navigate = useNavigate();
+   const [loading, setLoading] = useState(false);
+
+   const handleLoading  = (url) => {
+     setLoading(true);
+     setTimeout(() => {
+        setLoading(false)  
+        navigate(url)
+     }, 4000);
+   }
+  
 
 
 const [quantity, setquantity] = useState(1)
@@ -109,7 +123,20 @@ const settings = {
 
 
      return(
-        <div style={{fontFamily: "Poppins"}}>      
+        <div style={{fontFamily: "Poppins"}}>   
+
+
+
+{loading && (
+     <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-black/30 z-50">
+           <FadeLoader color="#f97316" />
+     </div>
+)}
+
+
+
+
+
           <div className='pt-10'>
 
 {/* home page */}
@@ -257,7 +284,7 @@ const settings = {
                  <button 
                onClick={handleOrder}
                  className='bg-red-500 p-2 w-50 text-white font-bold cursor-pointer rounded-md'>
-                   Add To Cart</button>
+                   <p onClick={handleLoading}>Add To Cart</p></button>
                </div>
              </div>
      

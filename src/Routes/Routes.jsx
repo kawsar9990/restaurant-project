@@ -41,6 +41,8 @@ import BlogSingmain from "../Page/Blog/BlogSingle/BlogSinMain";
 import BlogRoute from "../Page/Blog/BlogArchive/BlogRoutes";
 
 
+import SpinBox from "../Features/SpinPage/spinbox";
+
 
 // chat 
 import Chatbody from "../Features/HomeMessage/Chatbot";
@@ -108,6 +110,7 @@ const Routes = createBrowserRouter([
 {path: "/profile", element:<Profile />},
 {path: "/helpchenter", element:<HelpChenter />},
 {path: "/chat", element:<Chatbody />},
+{path: "/spinbox", element:<SpinBox />},
 
 
 

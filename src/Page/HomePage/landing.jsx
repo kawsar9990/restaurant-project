@@ -5,11 +5,22 @@ import img3 from '../../../public/Image/product-4-min-660x550.jpg'
 import img4 from '../../../public/Image/product-22-min-660x550.jpg'
 
 import { Link } from 'react-router'
+import { useState} from 'react'
+import { useNavigate } from 'react-router'
 
-
+import { FadeLoader } from "react-spinners";
 
 export default function Landing(){
-   
+   const navigate = useNavigate();
+   const [loading, setLoading] = useState(false);
+
+   const handleLoading  = (url) => {
+     setLoading(true);
+     setTimeout(() => {
+        setLoading(false)  
+        navigate(url)
+     }, 4000);
+   }
   
    
    const products = [
@@ -73,7 +84,16 @@ export default function Landing(){
    
    
      return(
-          <div className="bg-white">
+          <div className="bg-white relative">
+
+{loading && (
+     <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-black/30 z-50">
+           <FadeLoader color="#f97316" />
+     </div>
+)}
+
+
+
 
 <div className='pt-10'>
  
@@ -129,7 +149,7 @@ export default function Landing(){
                <p className='font-bold text-[20px]'>${p.price}</p>
                <p className='line-through text-gray-400'>${p.oldprice}</p>
           </p>
-          <button className=''
+          <button className='' onClick={()=> handleLoading("/shop")}
           ><Link to="/shop" className= ' border rounded-4xl border-orange-500 hover:text-white hover:bg-orange-600 p-3 '>Order Now</Link></button>
      </div>
 </div>
@@ -162,7 +182,7 @@ export default function Landing(){
 
 
 <div className='flex justify-center items-center pb-10 pt-5'>
-<Link to="/shop" className= ' border rounded-4xl border-orange-500 hover:text-white hover:bg-orange-600 p-3 '>
+<Link onClick={()=> handleLoading("/shop")} className= ' border rounded-4xl border-orange-500 hover:text-white hover:bg-orange-600 p-3 '>
 Show More
 </Link>
 </div>
