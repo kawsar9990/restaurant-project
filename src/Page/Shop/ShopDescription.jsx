@@ -9,7 +9,7 @@ import img from '../../../public/Svg/5.jpg'
 import { useState, useEffect } from 'react';
 
 
-export default  function Description(){
+export default  function ShopAllDescription(){
   
     const [reviews, setReviews] = useState([]);
      const [newReview, setnewReview] = useState({
@@ -21,7 +21,7 @@ export default  function Description(){
 
 
     useEffect(()=> {
-     const storeReview = localStorage.getItem('review');
+     const storeReview = localStorage.getItem('reviewall');
      if(storeReview){
           setReviews(JSON.parse(storeReview))
      }
@@ -30,7 +30,7 @@ export default  function Description(){
   
 
      useEffect(()=> {
-     localStorage.setItem('review', JSON.stringify(reviews))
+     localStorage.setItem('reviewall', JSON.stringify(reviews))
     },[reviews])
  
 
@@ -39,7 +39,7 @@ export default  function Description(){
      setnewReview({...newReview, [name]: value})
     }
 
-    const handleRatingChange = (value) => {
+    const handleRatingChange = (event, value) => {
      setnewReview({...newReview, rating: value})
     }
   
@@ -80,8 +80,7 @@ export default  function Description(){
     <TabPanel>
       <div>
           <p>
-   Massa a of est sit commodo convallis auctor as aliquet ready to ready works any more sem. Massa a of est sit commodo any convallis. Massa a of est sit commodo convallis auctor as aliquet ready to ready works any more sem. It’ Massa a of est sit commodo any convallis.Massa a of est sit commodo any convallis ready to auctor as aliquet.            
-          </p>
+কাওসার রেস্টুরেন্টে আমরা বিশ্বাস করি – “ভালো খাবার, ভালো মনের চাবিকাঠি।” তাই প্রতিটি পদ প্রস্তুত করা হয় সেরা মানের উপকরণ ব্যবহার করে এবং দক্ষ শেফদের হাতের ছোঁয়ায়। আমাদের খাবারের বৈচিত্র্যই আমাদের শক্তি। দেশি ঐতিহ্যবাহী খাবার থেকে শুরু করে ইতালিয়ান পাস্তা, আমেরিকান বার্গার, চাইনিজ নুডলস কিংবা মজাদার পিজ্জা – সবকিছুই পাবেন এক ছাদের নিচে।          </p>
       </div>
     </TabPanel>
 

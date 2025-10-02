@@ -1,27 +1,28 @@
-import img1 from '../../../public/Image/product-14-min.jpg'
-import img2 from '../../../public/Image/6.jpg'
-import img3 from '../../../public/Image/Blog_img_2-660x480.jpg'
-import img4 from '../../../public/Image/product_1_6-305x300.png'
-import img5 from '../../../public/Image/product_1_3-305x300.png'
-import img6 from '../../../public/Image/product_1_5-305x300.png'
-import img7 from '../../../public/Image/product-2-min.jpg'
-import img8 from '../../../public/Image/product-4-min-312x180.jpg'
+import lunch1 from '../../../public/Image/product-14-min.jpg'
+import lunch2 from '../../../public/Image/6.jpg'
+import lunch3 from '../../../public/Image/Blog_img_2-660x480.jpg'
+import lunch4 from '../../../public/Image/product_1_6-305x300.png'
+import lunch5 from '../../../public/Image/product_1_3-305x300.png'
+import lunch6 from '../../../public/Image/product_1_5-305x300.png'
+import lunch7 from '../../../public/Image/product-2-min.jpg'
+import lunch8 from '../../../public/Image/product-4-min-312x180.jpg'
 
-import { addToCart } from '../../Store/cartSlice'
-import { useDispatch } from 'react-redux'
-import Swal from "sweetalert2";
+
+
 import { motion } from 'framer-motion'
+import { Link } from 'react-router'
 
 
 export default function Lunch(){
      
-     const disptach = useDispatch()
+  
 
      
      const item = [
           {
-               id: 1,
-               img: img1,
+               id: 23,
+               img: lunch1,
+               category: [lunch1, lunch3, lunch2],
                reteus: "(2.0)",
                sale: "$15.00 OFF UPTO $25.00",
                name: "Vegitable Shop",
@@ -30,8 +31,9 @@ export default function Lunch(){
                price: 20.00,
           },
           {
-               id: 2,
-               img: img2,
+               id: 24,
+               img: lunch2,
+               category: [lunch2, lunch8, lunch5],
                reteus: "(2.0)",
                sale: "$15.00 OFF UPTO $25.00",
                name: "Vegetable Food",
@@ -40,8 +42,9 @@ export default function Lunch(){
                price: 10.0,
           },
           {
-               id: 3,
-               img: img3,
+               id: 25,
+               img: lunch3,
+               category: [lunch3, lunch6, lunch7],
                reteus: "(4.0)",
                sale: "$20.00 OFF UPTO $50.00",
                name: "African Pizza",
@@ -50,8 +53,9 @@ export default function Lunch(){
                price: 20.00,
           },
           {
-               id: 4,
-               img: img4,
+               id: 26,
+               img: lunch4,
+               category: [lunch4, lunch5, lunch6],
                reteus: "(3.5)",
                sale: "$5.00 OFF UPTO $15.00",
                name: "Vegetable Poteto",
@@ -60,8 +64,9 @@ export default function Lunch(){
                price: 10.00,
           },
            {
-               id: 5,
-               img: img5,
+               id: 27,
+               img: lunch5,
+               category: [lunch5, lunch1, lunch2],
                reteus: "(2.5)",
                sale: "$20.00 OFF UPTO $35.00",
                name: "Blister",
@@ -70,8 +75,9 @@ export default function Lunch(){
                price: 10.00,
           },
            {
-               id: 6,
-               img: img6,
+               id: 28,
+               img: lunch6,
+               category: [lunch6, lunch3, lunch4],
                reteus: "(3.5)",
                sale: "$5.00 OFF UPTO $25.00",
                name: "Chinese Pizza",
@@ -80,8 +86,9 @@ export default function Lunch(){
                price: 35.00,
           },
            {
-               id: 7,
-               img: img7,
+               id: 29,
+               img: lunch7,
+               category: [lunch7, lunch5, lunch2],
                reteus: "(4.5)",
                sale: "$25.00 OFF UPTO $35.00",
                name: "American Pizza",
@@ -90,8 +97,9 @@ export default function Lunch(){
                price: 30.00,
           },
           {
-               id: 8,
-               img: img8,
+               id: 30,
+               img: lunch8,
+               category: [lunch8, lunch3, lunch1],
                reteus: "(2.5)",
                sale: "$20.00 OFF UPTO $35.00",
                name: "Chicken",
@@ -103,23 +111,7 @@ export default function Lunch(){
      ]
     
      
-
-     const handleOrder = (product) => {
-          disptach(addToCart(product))
-          Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: `${product.name} Add To Cart!`,
-          showConfirmButton: false,
-          timer: 1500,
-          customClass: {
-                popup: "rounded-lg shadow-lg bg-white mt-10 w-10",
-                title: "text-gray-800 font-semibold w-full",
-          }
-});
-     }
-     
-     
+   
      
      return(
           <div className="bg-white ">
@@ -163,9 +155,10 @@ viewport={{ once: true }}
 
      <div className=''>
      <button 
-     onClick={()=> handleOrder(item)}
      className='rounded-full border p-2 border-orange-400 text-orange-500 w-30 font-semibold cursor-pointer hover:text-black hover:bg-orange-500'>
+       <Link to={`/menu/menuorder/${item.id}`}>
           Order Now
+       </Link>
      </button>
 </div>
 

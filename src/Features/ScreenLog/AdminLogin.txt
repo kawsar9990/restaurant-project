@@ -189,3 +189,65 @@ className="mt-3 w-full bg-indigo-600 text-white py-2 rounded-lg font-semibold ho
 
      )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------App Js-----------
+
+
+  import LoginPass from "./Features/ScreenLog/login"
+
+  const [islogin, setislogin] = useState(false)
+
+
+
+
+<div>
+
+{
+  !islogin ? (
+    <LoginPass onlogin={()=> setislogin(true)}/>
+  ): (
+
+<>
+<Header />
+
+
+
+{location.pathname !== '/cart' && <CardBox />}
+
+<div>
+<Outlet />
+</div>
+
+<Footer />
+
+</>
+  )
+}
+
+</div>

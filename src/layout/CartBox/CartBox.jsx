@@ -16,7 +16,7 @@ export default function CardBox(){
 
 
      return(
-     <Link to="">
+     <div>
      
           <div 
           
@@ -35,7 +35,7 @@ export default function CardBox(){
      {totalQuantity } <p>Item</p> </p>
 
 
-     <p className="opacity-100 w-20 font-black bg-[#dddd] p-2 rounded-full backdrop-blur-lg">
+     <p className="opacity-100 w-20 font-black  bg-white/30 backdrop-blur-md p-2 rounded-full ">
            ${totalPrice !== undefined ? totalPrice.toFixed(2) : 0}
           </p>
 </div>
@@ -49,6 +49,6 @@ export default function CardBox(){
           <CartSidebar closesidebar={()=> setIsOpen(false)}/>
      )}
 
-     </Link>
+   </div>
      )
 }

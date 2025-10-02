@@ -24,7 +24,7 @@ export default function Menu(){
                Kawsar.Restaurent/
           </Link>
           <Link to="">
-          Shop
+          Menu
           </Link>
           </p>
      </div>

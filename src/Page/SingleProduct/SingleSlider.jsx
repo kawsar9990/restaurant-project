@@ -183,7 +183,7 @@ const settings = {
       <div className='grid grid-cols-2 pt-5 pb-5 xl:grid-cols-3 gap-3'>
        
 {Object.keys(addonsPrice).map((key) => (
-  <div key={key} className="cursor-pointer flex gap-3">
+  <div key={key} className="cursor-pointer flex items-center gap-3">
 
 <input
 name={key}

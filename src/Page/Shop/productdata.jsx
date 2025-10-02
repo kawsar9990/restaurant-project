@@ -40,7 +40,7 @@ import img30 from '../../../public/Image/product-21-min-150x150.jpg'
   {
     id: 1,
     name: "Choco Meal",
-    categoryLinkLink: ["Fast Food"],
+    categoryLink: ["Fast Food"],
     rateus: "⭐⭐⭐⭐",
     rateusPoint: "4.5",
     titlename: "Lorem ipsum dolor sit amet",

@@ -6,13 +6,11 @@ import img4 from '../../../public/Image/product-22-min-660x550.jpg'
 
 import { Link } from 'react-router'
 
-import { useDispatch } from 'react-redux'
-import { addToCart } from '../../Store/cartSlice'
+
 
 export default function Landing(){
    
-     const dispatch = useDispatch();
-   
+  
    
    const products = [
      {
@@ -132,8 +130,7 @@ export default function Landing(){
                <p className='line-through text-gray-400'>${p.oldprice}</p>
           </p>
           <button className=''
-          onClick={()=> dispatch(addToCart(p))}
-          ><Link to="" className= ' border rounded-4xl border-orange-500 hover:text-white hover:bg-orange-600 p-3 '>Order Now</Link></button>
+          ><Link to="/shop" className= ' border rounded-4xl border-orange-500 hover:text-white hover:bg-orange-600 p-3 '>Order Now</Link></button>
      </div>
 </div>
 

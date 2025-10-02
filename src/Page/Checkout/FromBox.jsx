@@ -52,23 +52,27 @@ export default function FromBox(){
 <div>
 
 
-<div className="flex gap-5 justify-between w-full">
+
      <div className="flex flex-col gap-2">
           <label htmlFor="fr" className="text-red-500">First name *</label>
           <input type="text" name="fr" id="fr" 
           value={frname}
           onChange={(e)=> setfrname(e.target.value)}
-          className={`xl:w-60 ${inputclass} ${frname ? "border-green-500" : "border-red-500"}`}
+          className={`${inputclass} ${frname ? "border-green-500" : "border-red-500"}`}
           />
      </div>
-       <div className="flex flex-col gap-2">
+      
+
+
+ <div className="flex flex-col gap-2">
           <label htmlFor="ls" className="text-red-500">Last name *</label>
           <input type="text" id="ls" name="ls"
           value={lsname}
           onChange={(e)=> setlsname(e.target.value)}
-          className={`xl:w-60 ${inputclass} ${lsname ? "border-green-500" : "border-red-500"}`}           />
+          className={` ${inputclass} ${lsname ? "border-green-500" : "border-red-500"}`}           />
      </div>
-</div>
+
+
 
 <div className="flex flex-col gap-2 pt-5">
      <label htmlFor="cs" className="text-red-500">Company name (optional)</label>
@@ -182,7 +186,7 @@ export default function FromBox(){
 
 
 
-<div className="flex gap-5 justify-between w-full"> 
+
 
 <div className="flex flex-col gap-2">
           <label htmlFor="frr" className="text-red-500">First name *</label>
@@ -199,7 +203,7 @@ export default function FromBox(){
           onChange={(e)=> setlssname(e.target.value)}
           className={`xl:w-60 ${inputclass} ${lssname ? "border-green-500" : "border-red-500"}`}           />
      </div>
-     </div>
+
 
      
 <div className="flex flex-col gap-2 pt-5">

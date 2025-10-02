@@ -27,6 +27,15 @@ export default function Header() {
     setopendrop(prev => (prev === name ? null : name))
   }
 
+  const handlefalse = () => {
+    setMenuOpen(false)
+    setopendrop(null)
+  }
+
+
+  const handleDeksfalse = () => {
+    setopendrop(false)
+  }
 
   return (
     <>
@@ -46,7 +55,7 @@ export default function Header() {
             style={{ fontFamily: "Poppins" }}
             className="font-black text-2xl hover:text-blue-500"
           >
-            Kawsar.Resturent
+           <Link to="/"> Kawsar.Resturent</Link>
           </a>
         </h1>
 
@@ -54,7 +63,7 @@ export default function Header() {
         <nav className="hidden md:flex">
           <ul className="flex gap-5 mr-3 items-center">
             <Link to="/" className="hover:text-blue-500">Home</Link>
-            <Link to="/menu" className="hover:text-blue-500">Menu</Link>
+            <Link to="/menu"  className="hover:text-blue-500">Menu</Link>
 
            
             <div className="relative">
@@ -67,11 +76,11 @@ export default function Header() {
               </button>
               {opendrop === "shop" && (
                 <div className="absolute left-0 mt-2 w-50 bg-white text-black border rounded-md shadow-lg">
-                  <Link to="/shop" className="block px-4 py-1">Shop</Link>
-                  <Link to="/singlemain" className="block px-4 py-1">Single Product</Link>
-                  <Link to="/post" className="block px-4 py-1">Single Post</Link>
-                  <Link to="/cart" className="block px-4 py-1">Cart</Link>
-                  <Link to="/checkout" className="block px-4 py-1">Checkout</Link>
+                  <Link to="/shop" onClick={handleDeksfalse} className="block px-4 py-1">Shop</Link>
+                  <Link to="/singlemain" onClick={handleDeksfalse} className="block px-4 py-1">Single Product</Link>
+                  <Link to="/post" onClick={handleDeksfalse} className="block px-4 py-1">Single Post</Link>
+                  <Link to="/cart" onClick={handleDeksfalse} className="block px-4 py-1">Cart</Link>
+                  <Link to="/checkout" onClick={handleDeksfalse} className="block px-4 py-1">Checkout</Link>
                 </div>
               )}
             </div>
@@ -87,13 +96,13 @@ export default function Header() {
               </button>
               {opendrop === "page" && (
                 <div className="absolute left-0 mt-2 w-50 bg-white text-black border rounded-md shadow-lg">
-                  <Link to="/about" className="block px-4 py-1">About</Link>
-                  <Link to="/team" className="block px-4 py-1">Team</Link>
-                  <Link to="/contact" className="block px-4 py-1">Contact</Link>
-                  <Link to="/faq" className="block px-4 py-1">FAQ</Link>
-                  <Link to="/news" className="block px-4 py-1">News</Link>
-                  <Link to="/reservation" className="block px-4 py-1">Reservation</Link>
-                  <Link to="/helpchenter" className="block px-4 py-1">Help Center</Link>
+                  <Link to="/about" onClick={handleDeksfalse} className="block px-4 py-1">About</Link>
+                  <Link to="/team" onClick={handleDeksfalse} className="block px-4 py-1">Team</Link>
+                  <Link to="/contact" onClick={handleDeksfalse} className="block px-4 py-1">Contact</Link>
+                  <Link to="/faq" onClick={handleDeksfalse} className="block px-4 py-1">FAQ</Link>
+                  <Link to="/news" onClick={handleDeksfalse} className="block px-4 py-1">News</Link>
+                  <Link to="/reservation" onClick={handleDeksfalse} className="block px-4 py-1">Reservation</Link>
+                  <Link to="/helpchenter" onClick={handleDeksfalse} className="block px-4 py-1">Help Center</Link>
                 </div>
               )}
             </div>
@@ -109,8 +118,8 @@ export default function Header() {
               </button>
               {opendrop === "blog" && (
                 <div className="absolute left-0 mt-2 w-37 bg-white text-black border rounded-md shadow-lg">
-                  <Link to="" className="block px-4 py-2">Blog Archive</Link>
-                  <Link to="" className="block px-4 py-2">Blog Single</Link>
+                  <Link to="/blogarchive" onClick={handleDeksfalse} className="block px-4 py-2">Blog Archive</Link>
+                  <Link to="/blogsingle" onClick={handleDeksfalse} className="block px-4 py-2">Blog Single</Link>
                 </div>
               )}
             </div>
@@ -148,8 +157,8 @@ export default function Header() {
             className="md:hidden fixed top-[40px] right-0 left-0 pb-5 w-full bg-blue-50 shadow-lg flex flex-col pt-2 pl-2"
           >
             <ul className="flex flex-col gap-4 text-lg">
-              <Link to="/" className="hover:text-blue-500">Home</Link>
-              <Link to="/menu" className="hover:text-blue-500">Menu</Link>
+              <Link to="/" onClick={handlefalse} className="hover:text-blue-500">Home</Link>
+              <Link to="/menu"  onClick={handlefalse} className="hover:text-blue-500">Menu</Link>
 
           
 
@@ -163,11 +172,11 @@ export default function Header() {
                 </button>
                 {opendrop === "shop" && (
                   <div className="pl-4 flex flex-col gap-0">
-                    <Link to="/shop" className="block px-4 py-1">Shop</Link>
-                    <Link to="/singlemain" className="block px-4 py-1">Single Product</Link>
-                    <Link to="/post" className="block px-4 py-1">Single Post</Link>
-                    <Link to="/cart" className="block px-4 py-1">Cart</Link>
-                    <Link to="/checkout" className="block px-4 py-1">Checkout</Link>
+                    <Link to="/shop"  onClick={handlefalse} className="block px-4 py-1">Shop</Link>
+                    <Link to="/singlemain"  onClick={handlefalse} className="block px-4 py-1">Single Product</Link>
+                    <Link to="/post"  onClick={handlefalse} className="block px-4 py-1">Single Post</Link>
+                    <Link to="/cart"  onClick={handlefalse} className="block px-4 py-1">Cart</Link>
+                    <Link to="/checkout"  onClick={handlefalse} className="block px-4 py-1">Checkout</Link>
                   </div>
                 )}
               </div>
@@ -184,13 +193,13 @@ export default function Header() {
                 </button>
                 {opendrop === "page" && (
                   <div className="pl-4 flex flex-col gap-0">
-                    <Link to="/about" className="block px-4 py-1">About</Link>
-                    <Link to="/team" className="block px-4 py-1">Team</Link>
-                    <Link to="/contact" className="block px-4 py-1">Contact</Link>
-                    <Link to="/faq" className="block px-4 py-1">FAQ</Link>
-                    <Link to="/news" className="block px-4 py-1">News</Link>
-                    <Link to="/reservation" className="block px-4 py-1">Reservation</Link>
-                    <Link to="/helpchenter" className="block px-4 py-1">Help Center</Link>
+                    <Link to="/about"  onClick={handlefalse}  className="block px-4 py-1">About</Link>
+                    <Link to="/team"   onClick={handlefalse} className="block px-4 py-1">Team</Link>
+                    <Link to="/contact"  onClick={handlefalse} className="block px-4 py-1">Contact</Link>
+                    <Link to="/faq"   onClick={handlefalse} className="block px-4 py-1">FAQ</Link>
+                    <Link to="/news"  onClick={handlefalse}  className="block px-4 py-1">News</Link>
+                    <Link to="/reservation"  onClick={handlefalse} className="block px-4 py-1">Reservation</Link>
+                    <Link to="/helpchenter"  onClick={handlefalse} className="block px-4 py-1">Help Center</Link>
                   </div>
                 )}
               </div>
@@ -207,13 +216,13 @@ export default function Header() {
                 </button>
                 {opendrop === "blog" && (
                   <div className="pl-4 flex flex-col gap-0">
-                    <Link to="" className="block px-4 py-2">Blog Archive</Link>
-                    <Link to="" className="block px-4 py-2">Blog Single</Link>
+                    <Link to="/blogarchive"  onClick={handlefalse} className="block px-4 py-2">Blog Archive</Link>
+                    <Link to="/blogsingle"  onClick={handlefalse} className="block px-4 py-2">Blog Single</Link>
                   </div>
                 )}
               </div>
 
-              <Link to="/profile" className="hover:text-blue-500">Profile</Link>
+              <Link to="/profile"  onClick={handlefalse} className="hover:text-blue-500">Profile</Link>
             </ul>
           </motion.nav>
         )}

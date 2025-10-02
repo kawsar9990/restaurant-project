@@ -11,13 +11,11 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 library.add(faCartShopping)
 
 
-import { useDispatch } from 'react-redux'
-import { addToCart } from '../../Store/cartSlice'
 
 
 export default function RelatedProduct(){
     
-   const dispatch = useDispatch();    
+      
   
    
    const product = [
@@ -104,9 +102,12 @@ export default function RelatedProduct(){
      <p className='flex justify-center gap-2 text-gray-400 pb-3 pt-3'><p>{products.RatingStar}</p>{products.RatingPoints}</p>
      <p className='text-gray-500'>Lorem ipsum dolor sit amet consectetur. Habitasse metus urna...</p>
      <p className='pt-5 flex justify-center gap-3 items-center'><p className='text-[15px] line-through text-gray-400'>${products.offPtice}</p><p className='text-black font-bold text-2xl'>${products.price}</p></p>
-     <button
-     onClick={()=> dispatch(addToCart(products))}
-     className='flex justify-center outline w-full font-bold text-orange-500 hover:bg-orange-600 hover:text-white hover:outline-0 cursor-pointer mt-5 outline-orange-600 p-2 rounded-3xl '><p><FontAwesomeIcon icon={faCartShopping} /></p><p>Add To Cart</p></button>
+    <button>
+              <Link to={`/menu`} 
+               className='flex justify-center outline w-full font-bold text-orange-500 hover:bg-orange-600 hover:text-white hover:outline-0 cursor-pointer mt-5 outline-orange-600 p-3 rounded-3xl '>
+               <p><FontAwesomeIcon icon={faCartShopping} /></p><p>Add To Cart</p>
+              </Link>
+               </button>
 </div>
 
 </div>

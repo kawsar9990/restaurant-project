@@ -1,38 +1,27 @@
-1. ---- header -----
-2. header import to app
-3. Product --- product fillter
-4. Myweb looading --- login and then unser and pass to web on
-5. spain page then chorki r moto oita
-
-
-
-
-1. checkoutpage ---end (start --- Privecy policy page , therms of use page, order summery, input filed red signal erro, remind me page, heanding free te i marks)
-2. reservation --- end
-3. about --- end 
-5. Faq page --- end
-6. Aboutuspage --- end
-7. homepage --- end (routes)
-8. Team --- end
-9. Help Chenter --- end (submit ticket routes)
-10. Profile --- end
-11. News --- end
-12. singlepost --- end
-13. privacy & theme page --- end
-14. prement gateway system
-
-
-
-
 
 --------------mision----------------
-homepage er routes 
-homepage --- active all cokies box + end slider wrong solved...
-homepage javascript use sidebar +
-page + graphchat join
-loginpage no text ---- error page create
-kiso add function system
-profile and contact and reservaction e js use kore from controll korbu
+spain page then chorki r moto oita + graphchat + qrcode + 
+menu page plus item system jno je kew item jok korte pare aita localstroage e joma hobe +
+add to cupon ase aita kiso code joma thakbe jodi mile jai tahole spain korar page e niya jabe +
++ menu bar e page er jonno blogsinpost er moto akta page banabu jeitai coment korte parbe ar sathe releted post thakbe ar ki single post er dupkicate hobe+
+jkn cuppon e kiso number bosai dibu jodi number mile jai tahole free spain pabe ta cara spain pabe ar cuppo er number gula menu bar e sob item e thakbe +
+ar menu bar e item kinar por automatice alert show korbe tkn cuppon number show korbe ar menu box e spain box o thakbe jeita click korle sathe sathe cuppon code cabe jodi mile jai tahole spin page e dukhabe
+
+checkout page theke location oita select korte hobe
+
+net connection and unconnection aita niya akta box banabu
+
+
+kono akta input e check korbu je input e jno number text na kora jai +
+and comments box e sudo email ba sudo name text kora jabe na kora hole comments hobe na.
+
+
+
+latest e checkout page + login page programme kora hobe 
+
+
+
+
 
 
 

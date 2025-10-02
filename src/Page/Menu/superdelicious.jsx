@@ -13,16 +13,16 @@ import img12 from '../../../public/Image/catg-chinese.png'
 import img13 from '../../../public/Image/catg-pasta.png'
 import img14 from '../../../public/Image/catg-pizza.png'
 
-import { addToCart } from '../../Store/cartSlice'
-import { useDispatch } from 'react-redux'
 
-import Swal from "sweetalert2";
+
+
 import { motion } from 'framer-motion'
+import { Link } from 'react-router'
 
 
 export default function SuperDelicous(){
      
-     const disptach = useDispatch()
+ 
 
      
      const item = [
@@ -170,21 +170,6 @@ export default function SuperDelicous(){
      
      
 
-     const handleOrder = (product) => {
-          disptach(addToCart(product))
-          Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: `${product.name} Add To Cart!`,
-          showConfirmButton: false,
-          timer: 1500,
-          customClass: {
-                popup: "rounded-lg shadow-lg bg-white mt-10 w-10",
-                title: "text-gray-800 font-semibold w-full",
-          }
-});
-     }
-     
      
      return(
      
@@ -200,6 +185,8 @@ export default function SuperDelicous(){
 
 
 
+
+<div>
 
 
 <motion.div
@@ -234,9 +221,11 @@ viewport={{ once: true }}
 
      <div className=''>
      <button 
-     onClick={()=> handleOrder(item)}
      className='rounded-full border p-2 border-orange-400 text-orange-500 w-30 font-semibold cursor-pointer hover:text-black hover:bg-orange-500'>
-          Order Now
+       <Link to={`/menu/menuorder/${item.id}`}>
+        Order Now
+       </Link>  
+
      </button>
 </div>
 
@@ -252,7 +241,7 @@ viewport={{ once: true }}
 
 </motion.div>
 
-
+</div>
 
 
 

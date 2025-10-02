@@ -8,8 +8,7 @@ import img8 from '../../../public/Image/product-12-min-200x200.jpg'
 import img9 from '../../../public/Image/product-13-min-200x200.jpg'
 
 
-import { useDispatch } from 'react-redux'
-import { addToCart } from '../../Store/cartSlice'
+
 
 
 // import img4 from '../../../public/Image/hhh.jpg'
@@ -24,7 +23,7 @@ import { Link } from 'react-router'
 
 export default function FillterHome(){
     
-const dispatch = useDispatch()
+
 
 
   const product = [
@@ -119,7 +118,7 @@ const dispatch = useDispatch()
 
 
 <Tabs>
-    <TabList className={`flex justify-evenly  font-bold cursor-pointer`}>
+    <TabList className={`flex justify-evenly gap-2 p-1  font-bold cursor-pointer`}>
       {filtercategory.map((cat, i) => (
       <Tab
         key={i}
@@ -138,8 +137,8 @@ const dispatch = useDispatch()
 {/* all tabs  */}
 
 {filtercategory.map((cat, i)=> (
-    <TabPanel key={i}  className={`p-10`}>
-<div className='grid gap-5 grid-cols-1 xl:grid-cols-2'>
+    <TabPanel key={i}  className={``}>
+<div className='grid gap-5 grid-cols-1 xl:grid-cols-2 p-5'>
 
 {product
 .filter(p => cat === "All" || p.category.includes(cat))
@@ -161,9 +160,9 @@ const dispatch = useDispatch()
       </div>
       <p className='flex p-2 xl:p-0 flex-row capitalize justify-center xl:justify-start text-gray-500'>Lorem ipsum dolor sit amet consectetur. Habitasse metus urna risus nunc proin quis any</p>
       <div className='p-5 xl:p-0'>
-        <div className='flex justify-evenly xl:justify-start xl:gap-5 xl:pt-5'>
-          <p className='flex gap-2'><span className='items-end flex text-gray-400 line-through'>${p.oldPrice}</span><span className='font-black text-2xl'>${p.price}</span></p>
-          <button onClick={()=> dispatch(addToCart(p))}><Link to=""className={`hover:bg-orange-600 hover:text-white text-orange-600 outline-1 p-2 rounded-3xl w-20 text-center `}>Order Now</Link></button>
+        <div className='flex flex-col text-center gap-5 justify-center xl:justify-start xl:gap-5 xl:pt-5'>
+          <p className='flex gap-2 justify-center'><span className='items-end flex text-gray-400 line-through'>${p.oldPrice}</span><span className='font-black text-2xl'>${p.price}</span></p>
+          <button><Link to="/menu"className={`hover:bg-orange-600 hover:text-white text-orange-600 outline-1 p-2 rounded-3xl w-20 text-center `}>Order Now</Link></button>
         </div>
       </div>
   </div>

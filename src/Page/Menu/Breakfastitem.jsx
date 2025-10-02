@@ -1,121 +1,116 @@
-import img1 from '../../../public/Image/catg-rice.png'
-import img2 from '../../../public/Image/catg-burger.png'
-import img3 from '../../../public/Image/prod-2.jpg'
-import img4 from '../../../public/Image/product_1_1-305x300.png'
-import img5 from '../../../public/Image/product_1_3-305x300.png'
-import img6 from '../../../public/Image/product_details_1_1-305x300.png'
-import img7 from '../../../public/Image/product-11-min.jpg'
-import img8 from '../../../public/Image/product-12-min-200x200.jpg'
+import breakfast1 from '../../../public/Image/catg-rice.png'
+import breakfast2 from '../../../public/Image/catg-burger.png'
+import breakfast3 from '../../../public/Image/prod-2.jpg'
+import breakfast4 from '../../../public/Image/product_1_1-305x300.png'
+import breakfast5 from '../../../public/Image/product_1_3-305x300.png'
+import breakfast6 from '../../../public/Image/product_details_1_1-305x300.png'
+import breakfast7 from '../../../public/Image/product-11-min.jpg'
+import breakfast8 from '../../../public/Image/product-12-min-200x200.jpg'
 
-import { addToCart } from '../../Store/cartSlice'
-import { useDispatch } from 'react-redux'
-import Swal from 'sweetalert2'
+
+
 import { motion } from 'framer-motion'
+import { Link } from 'react-router'
+
 
 export default function Breakfast(){
      
-     const disptach = useDispatch()
-
+     
      
      const item = [
-          {
-               id: 1,
-               img: img1,
-               reteus: "(1.0)",
-               sale: "$15.00 OFF UPTO $20.00",
-               name: "Rice",
-               titlename: "Food",
-               oldprice: 10.00,
-               price: 5.00,
-          },
-          {
-               id: 2,
-               img: img2,
-               reteus: "(2.0)",
-               sale: "$15.00 OFF UPTO $25.00",
-               name: "Vegetable Burger",
-               titlename: "Food",
-               oldprice: 40.00,
-               price: 20.0,
-          },
-          {
-               id: 3,
-               img: img3,
-               reteus: "(4.0)",
-               sale: "$20.00 OFF UPTO $50.00",
-               name: "Chicken Pizza",
-               titlename: "Fast Food",
-               oldprice: 40.00,
-               price: 20.00,
-          },
-          {
-               id: 4,
-               img: img4,
-               reteus: "(3.5)",
-               sale: "$5.00 OFF UPTO $15.00",
-               name: "Vegetable Poteto",
-               titlename: "Fast Food",
-               oldprice: 25.00,
-               price: 10.00,
-          },
-           {
-               id: 5,
-               img: img5,
-               reteus: "(2.5)",
-               sale: "$20.00 OFF UPTO $35.00",
-               name: "Blister",
-               titlename: "Fast Food",
-               oldprice: 30.00,
-               price: 10.00,
-          },
-           {
-               id: 6,
-               img: img6,
-               reteus: "(3.5)",
-               sale: "$5.00 OFF UPTO $15.00",
-               name: "Chinese Pizza",
-               titlename: "Fast Food",
-               oldprice: 30.00,
-               price: 20.00,
-          },
-           {
-               id: 7,
-               img: img7,
-               reteus: "(3.5)",
-               sale: "$20.00 OFF UPTO $25.00",
-               name: "Chicken Biriani",
-               titlename: "Fast Food",
-               oldprice: 15.00,
-               price: 30.00,
-          },
-          {
-               id: 8,
-               img: img8,
-               reteus: "(1.5)",
-               sale: "$20.00 OFF UPTO $15.00",
-               name: "Vegetable Food",
-               titlename: "Food",
-               oldprice: 10.00,
-               price: 5.00,
-          },
+{
+      id: 15,
+      img: breakfast1,
+      category: [breakfast1, breakfast3, breakfast8],
+      reteus: "(1.0)",
+      sale: "$15.00 OFF UPTO $20.00",
+      name: "Rice",
+      titlename: "Food",
+      oldprice: 10.00,
+      price: 5.00,
+     },
+      {
+      id: 16,
+      img: breakfast2,
+      category: [breakfast2, breakfast7, breakfast5],
+      reteus: "(1.0)",
+      sale: "$15.00 OFF UPTO $20.00",
+      name: "Rice",
+      titlename: "Food",
+      oldprice: 10.00,
+      price: 5.00,
+     },
+      {
+      id: 17,
+      img: breakfast3,
+      category: [breakfast3, breakfast4, breakfast6],
+      reteus: "(1.0)",
+      sale: "$15.00 OFF UPTO $20.00",
+      name: "Rice",
+      titlename: "Food",
+      oldprice: 10.00,
+      price: 5.00,
+     },
+         {
+    id: 18,
+    img: breakfast4,            
+    category: [breakfast4, breakfast6, breakfast8],
+    reteus: "(3.5)",
+    sale: "$5.00 OFF UPTO $15.00",
+    name: "Vegetable Poteto",
+    titlename: "Fast Food",
+    oldprice: 25.00,
+    price: 10.00,
+},
+       {
+  id: 19,
+  img: breakfast5,             
+  category: [breakfast5, breakfast7, breakfast2],
+  reteus: "(2.5)",
+  sale: "$20.00 OFF UPTO $35.00",
+  name: "Blister",
+  titlename: "Fast Food",
+  oldprice: 30.00,
+  price: 10.00,
+},
+{
+  id: 20,
+  img: breakfast6,               
+  category: [breakfast6, breakfast4, breakfast3],
+  reteus: "(3.5)",
+  sale: "$5.00 OFF UPTO $15.00",
+  name: "Chinese Pizza",
+  titlename: "Fast Food",
+  oldprice: 30.00,
+  price: 20.00,
+},
+     {
+  id: 21,
+  img: breakfast7,             
+  category: [breakfast7, breakfast5, breakfast2],
+  reteus: "(3.5)",
+  sale: "$20.00 OFF UPTO $25.00",
+  name: "Chicken Biriani",
+  titlename: "Fast Food",
+  oldprice: 15.00,
+  price: 30.00,
+},
+       {
+  id: 22,
+  img: breakfast8,              
+  category: [breakfast8, breakfast4, breakfast6],
+  reteus: "(1.5)",
+  sale: "$20.00 OFF UPTO $15.00",
+  name: "Vegetable Food",
+  titlename: "Food",
+  oldprice: 10.00,
+  price: 5.00,
+},
          
      ]
      
 
-      const handleOrder = (product) => {
-          disptach(addToCart(product))
-          Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: `${product.name} Add To Cart!`,
-          showConfirmButton: false,
-          timer: 1500,
-          customClass: {
-                popup: "rounded-lg shadow-lg bg-white mt-10 w-10",
-                title: "text-gray-800 font-semibold w-full",
-          }
-});
-     }
+
      
      
      
@@ -162,9 +157,10 @@ viewport={{ once: true }}
 
      <div className=''>
      <button 
-     onClick={()=> handleOrder(item)}
      className='rounded-full border p-2 border-orange-400 text-orange-500 w-30 font-semibold cursor-pointer hover:text-black hover:bg-orange-500'>
+         <Link to={`/menu/menuorder/${item.id}`}>
           Order Now
+        </Link>
      </button>
 </div>
 

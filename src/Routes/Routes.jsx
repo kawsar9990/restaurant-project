@@ -15,11 +15,30 @@ import News from "../Page/News/News";
 import Checkout from "../Page/Checkout/CheckoutPage";
 import NotF from "../Page/RoutesPage/NotFoundPage/Notfound";
 import Cart from "../Page/Cart/Cart";
-import Shops from "../Page/Shop/Shop";
+
+
+
+import ShopMainPage from "../Page/Shop/Shop";
+import Shoproute from "../Page/Shop/shoproute";
+
+
+
+
+
+// menu 
 import Menu from "../Page/Menu/Menu";
+import MenuAllRoutes from "../Page/Menu/AllRoutespage";
+
+
 
 // SingleProduct 
 import SingleMain from "../Page/SingleProduct/SingleMain";
+
+
+//blog
+import BlogArcmain from "../Page/Blog/BlogArchive/BlogArcmain";
+import BlogSingmain from "../Page/Blog/BlogSingle/BlogSinMain";
+import BlogRoute from "../Page/Blog/BlogArchive/BlogRoutes";
 
 
 
@@ -65,10 +84,26 @@ const Routes = createBrowserRouter([
 {path: "/news/burgernews", element:<BurgerNews />},
 {path: "/news/burgerroute", element:<BurgerRoute />},
 {path: "/singlemain", element:<SingleMain />},
-{path: "/shop", element:<Shops />},
+
+
+
+
+
 {path: "/menu", element:<Menu />},
+{path: "/menu/menuorder/:cs", element:<MenuAllRoutes />},
+
 {path: "/cart", element:<Cart />},
+{path: "/blogarchive", element:<BlogArcmain />},
+{path: "/blogarchive/blogroutes/:id", element:<BlogRoute />},
+{path: "/blogsingle", element:<BlogSingmain />},
+
+
+{path: "/shop", element:<ShopMainPage />},
+{path: "/shop/shoproute/:idd", element:<Shoproute />},
+
 ]},
+
+
 
 {path: "/profile", element:<Profile />},
 {path: "/helpchenter", element:<HelpChenter />},

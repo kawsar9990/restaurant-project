@@ -8,11 +8,11 @@ import { removeCart, increment, decrement } from "../../Store/cartSlice"
 
 export default function CartBox(){
 const [open, setOpen] = useState(false);
- const {items, totalPrice} = useSelector((state)=> state.cart)   
+ const {item, totalPrice} = useSelector((state)=> state.cart)   
  const dispatch = useDispatch();   
 
 
- if(items.length === 0){
+ if(item.length === 0){
      return(
           <div className="p-10 text-center">
                <div className="text-5xl">
@@ -35,7 +35,7 @@ const [open, setOpen] = useState(false);
 
  <div className="flex flex-col p-5 gap-5">
 
-{items.map((item)=> (
+{item.map((item)=> (
 <div key={item.id} className="flex  gap-5 w-full items-start">
 
 <div className="">

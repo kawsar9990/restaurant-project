@@ -8,7 +8,7 @@ import { Link } from "react-router";
 
 export default function CartSidebar({closesidebar}){
    
-     const {items ,totalPrice, totalQuantity } = useSelector(state => state.cart)
+     const {item ,totalPrice, totalQuantity } = useSelector(state => state.cart)
      const dispatch = useDispatch();
     
      return(
@@ -50,7 +50,7 @@ export default function CartSidebar({closesidebar}){
 <div className="pt-5 pb-10">
 
 <div className="flex flex-col justify-start items-start">
-{items.map(item => (
+{item.map(item => (
 <div className="flex flex-row gap-2 p-1 justify-start items-start" key={item.id}>
      <img src={item.img} alt={item.name} className="flex  w-16 h-16 rounded-md object-cover"/>
      <div className="flex flex-col ">
