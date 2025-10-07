@@ -1,22 +1,4 @@
-# 🧑‍💻 Full Stack App (React)
 
-## 🚀 Project Overview
-এই প্রজেক্টে আমি Frontend (React) ব্যবহার করেছি।
-
----
-
-## ⚙️ Installation Steps
-
-### 1️⃣ Clone the repository
-```bash
-git clone https://github.com/kawsar9990/restaurant-project.git```
-
-
-
-
-
-# fetaures 
-# React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -39,13 +21,32 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 
+####
+# 🧑‍💻 Full Stack App (React)
+
+## 🚀 Project Overview
+এই প্রজেক্টে আমি Frontend (React) ব্যবহার করেছি।
+
+---
+
+## ⚙️ Installation Steps
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/kawsar9990/restaurant-project.git```
+
+
+
+
+
+
+
 
 ### 2️⃣ Install dependencies
 
 
 **Frontend (client):**
 ```bash
-cd ../client
 npm install
 ```
 
@@ -55,7 +56,6 @@ npm install
 
 **Frontend চালাও:**
 ```bash
-cd ../client
 npm start
 ```
 
