@@ -1,0 +1,18 @@
+.slick-dots.slick-thumb {
+     display: flex !important;
+     justify-content: space-between !important;
+     flex-direction: row !important;
+     border-radius: 7px !important;
+}
+
+.slick-dots.slick-thumb li {
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  display: flex !important;
+   border-radius: 7px !important;
+}
+
+.iiZ__zoomHint {
+  display: none !important;
+}

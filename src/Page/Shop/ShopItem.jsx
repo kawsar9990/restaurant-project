@@ -1,0 +1,411 @@
+
+
+
+
+import img1 from '../../../public/Image/product-15-min-312x180.jpg'
+import img2 from '../../../public/Image/product-8-min-312x180.jpg'
+import img3 from '../../../public/Image/product-10-min-312x180.jpg'
+import img4 from '../../../public/Image/product-12-min-200x200.jpg'
+import img5 from '../../../public/Image/product-4-min-312x180.jpg'
+import img6 from '../../../public/Image/product-19-min-400x240.jpg'
+import img7 from '../../../public/Image/product-13-min-200x200.jpg'
+import img8 from '../../../public/Image/product-13-min-200x200.jpg'
+import img9 from '../../../public/Image/product-2-min-660x550.jpg'
+import img10 from '../../../public/Image/product-9-min (1).jpg'
+import img11 from '../../../public/Image/product-9-min (1).jpg'
+import img12 from '../../../public/Image/product-6-min.jpg'
+import img13 from '../../../public/Image/product-4-min-312x180.jpg'
+import img14 from '../../../public/Image/product_1_8-305x300.png'
+import img15 from '../../../public/Image/product_1_7-305x300.png'
+import img16 from '../../../public/Image/product-11-min-312x180.jpg'
+import img17 from '../../../public/Image/product-12-min-200x200.jpg'
+import img18 from '../../../public/Image/product-15-min-312x180.jpg'
+import img19 from '../../../public/Image/product-8-min-312x180.jpg'
+import img20 from '../../../public/Image/homemade-beef-burger-caramelized-onion-bacon-and-beer-e1627971449244.jpg'
+import img21 from '../../../public/Image/Blog_img_2-413x220.jpg'
+import img22 from '../../../public/Image/catg-chinese.png'
+import img23 from '../../../public/Image/catg-pasta.png'
+import img24 from '../../../public/Image/catg-pizza.png'
+import img25 from '../../../public/Image/catg-rice.png'
+import img26 from '../../../public/Image/product-21-min-150x150.jpg'
+import img27 from '../../../public/Image/product-22-min.jpg'
+import img28 from '../../../public/Image/product-7-min-312x180.jpg'
+import img29 from '../../../public/Image/product-22-min.jpg'
+import img30 from '../../../public/Image/product-21-min-150x150.jpg'
+
+
+
+
+ const item = [
+  {
+    id: 1,
+    name: "Choco Meal",
+    categoryLinkLink: ["Fast Food"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.5",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 19.00,
+    price: 13.00,
+    img: img1,
+    category: [img1, img22, img23],
+  },
+  {
+    id: 2,
+    name: "Mushroom Soup",
+    categoryLink: ["Rice", "dinner"],
+    rateus: "⭐⭐⭐",
+    rateusPoint: "3.8",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 25.00,
+    price: 21.00,
+    img: img2,
+    category: [img2, img23, img24],
+  },
+  {
+    id: 3,
+    name: "Burger with Meat",
+    categoryLink: ["Chinese", "Burger", "Lunch"],
+    rateus: "⭐⭐⭐⭐⭐",
+    rateusPoint: "5.0",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 22.00,
+    price: 16.00,
+    img: img3,
+    category: [img3, img24, img22],
+  },
+  {
+    id: 4,
+    name: "Chicken Biriani",
+    categoryLink: ["Rice", "Food", "Lunch"],
+    rateus: "⭐⭐⭐",
+    rateusPoint: "3.5",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 20.00,
+    price: 19.00,
+    img: img4,
+    category: [img4, img22, img23],
+  },
+  {
+    id: 5,
+    name: "BBQ By Barbeque",
+    categoryLink: ["Fast food", "lunch"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.2",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 30.00,
+    price: 29.00,
+    img: img5,
+    category: [img5, img23, img24],
+  },
+  {
+    id: 6,
+    name: "Lavashs rolls",
+    categoryLink: ["Pizza", "Chinese", "Burger", "Dinner", "Chicken"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.0",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 21.00,
+    price: 20.00,
+    img: img6,
+    category: [img6, img24, img22],
+  },
+  {
+    id: 7,
+    name: "Lula Kebab Adjika",
+    categoryLink: ["Rice", "Lunch"],
+    rateus: "⭐⭐⭐",
+    rateusPoint: "3.7",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 25.00,
+    price: 18.00,
+    img: img7,
+    category: [img7, img22, img23],
+  },
+  {
+    id: 8,
+    name: "Chicken Shawarma",
+    categoryLink: ["Food", "dinner"],
+    rateus: "⭐⭐⭐⭐⭐",
+    rateusPoint: "4.9",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 30.00,
+    price: 17.50,
+    img: img8,
+    category: [img8, img23, img24],
+  },
+  {
+    id: 9,
+    name: "American Pizza",
+    categoryLink: ["Burger", "Fast food", "pizza"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.3",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 22.00,
+    price: 21.50,
+    img: img9,
+    category: [img9, img24, img22],
+  },
+  {
+    id: 10,
+    name: "Doner Kebab",
+    categoryLink: ["pizza", "lunch"],
+    rateus: "⭐⭐⭐",
+    rateusPoint: "3.6",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 35.00,
+    price: 34.00,
+    img: img10,
+    category: [img10, img22, img23],
+  },
+  {
+    id: 11,
+    name: "Beyti Kebab",
+    categoryLink: ["pizza", "lunch", "fast food"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.1",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 32.00,
+    price: 31.50,
+    img: img11,
+    category: [img11, img23, img24],
+  },
+  {
+    id: 12,
+    name: "Rice",
+    categoryLink: ["Rice"],
+    rateus: "⭐⭐⭐⭐⭐",
+    rateusPoint: "4.8",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 8.00,
+    price: 7.80,
+    img: img12,
+    category: [img12, img24, img22],
+  },
+  {
+    id: 13,
+    name: "Grilled Lamb",
+    categoryLink: ["Pizza", "Food", "Fast food"],
+    rateus: "⭐⭐⭐",
+    rateusPoint: "3.9",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 22.00,
+    price: 21.50,
+    img: img13,
+    category: [img13, img22, img23],
+  },
+  {
+    id: 14,
+    name: "Cheese Burst Burger",
+    categoryLink: ["Burger", "Pizza"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.4",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 25.00,
+    price: 24.00,
+    img: img14,
+    category: [img14, img23, img24],
+  },
+  {
+    id: 15,
+    name: "Margherita Pizza",
+    categoryLink: ["food", "pizza"],
+    rateus: "⭐⭐⭐",
+    rateusPoint: "3.4",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 22.00,
+    price: 21.00,
+    img: img15,
+    category: [img15, img24, img22],
+  },
+  {
+    id: 16,
+    name: "Beef Biryani",
+    categoryLink: ["Rice", "Food", "Lunch"],
+    rateus: "⭐⭐⭐⭐⭐",
+    rateusPoint: "4.7",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 28.00,
+    price: 25.00,
+    img: img16,
+    category: [img16, img22, img23],
+  },
+  {
+    id: 17,
+    name: "Sindhi Biryani",
+    categoryLink: ["Rice", "Dinner"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.0",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 26.00,
+    price: 23.50,
+    img: img17,
+    category: [img17, img23, img24],
+  },
+  {
+    id: 18,
+    name: "Grilled Chicken Sandwich",
+    categoryLink: ["Fast Food", "Lunch"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.2",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 20.00,
+    price: 18.00,
+    img: img18,
+    category: [img18, img24, img22],
+  },
+  {
+    id: 19,
+    name: "Chicken Fried Rice",
+    categoryLink: ["Rice", "Dinner"],
+    rateus: "⭐⭐⭐",
+    rateusPoint: "3.8",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 22.00,
+    price: 19.50,
+    img: img19,
+    category: [img19, img22, img23],
+  },
+  {
+    id: 20,
+    name: "Double Patty Burger",
+    categoryLink: ["Burger", "Fast Food"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.3",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 24.00,
+    price: 21.50,
+    img: img20,
+    category: [img20, img23, img24],
+  },
+  {
+    id: 21,
+    name: "Veggie Supreme Pizza",
+    categoryLink: ["Pizza", "Fast Food"],
+    rateus: "⭐⭐⭐⭐⭐",
+    rateusPoint: "5.0",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 26.00,
+    price: 23.00,
+    img: img21,
+    category: [img21, img24, img22],
+  },
+  {
+    id: 22,
+    name: "Spaghetti Bolognese",
+    categoryLink: ["Pasta", "Dinner"],
+    rateus: "⭐⭐⭐",
+    rateusPoint: "3.5",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 18.00,
+    price: 16.50,
+    img: img22,
+    category: [img22, img22, img23],
+  },
+  {
+    id: 23,
+    name: "Pesto Pasta",
+    categoryLink: ["Pasta", "Lunch"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.2",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 20.00,
+    price: 18.00,
+    img: img23,
+    category: [img23, img23, img24],
+  },
+  {
+    id: 24,
+    name: "Tandoori Chicken Pizza",
+    categoryLink: ["Pizza", "Dinner"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.1",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 28.00,
+    price: 26.00,
+    img: img24,
+    category: [img24, img24, img22],
+  },
+  {
+    id: 25,
+    name: "Kashmiri Pulao",
+    categoryLink: ["Rice", "Dinner"],
+    rateus: "⭐⭐⭐",
+    rateusPoint: "3.6",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 22.00,
+    price: 20.00,
+    img: img25,
+    category: [img25, img22, img23],
+  },
+  {
+    id: 26,
+    name: "Garlic Butter Shrimp Pasta",
+    categoryLink: ["Pasta", "Dinner", "Seafood"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.4",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 30.00,
+    price: 27.50,
+    img: img26,
+    category: [img26, img23, img24],
+  },
+  {
+    id: 27,
+    name: "Beef Halim",
+    categoryLink: ["Rice", "Breakfast"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.2",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 19.00,
+    price: 16.50,
+    img: img27,
+    category: [img27, img24, img22],
+  },
+  {
+    id: 28,
+    name: "Chicken Noduls",
+    categoryLink: ["Pasta", "Lunch"],
+    rateus: "⭐⭐⭐",
+    rateusPoint: "3.7",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 18.00,
+    price: 16.00,
+    img: img28,
+    category: [img28, img22, img23],
+  },
+  {
+    id: 29,
+    name: "Chicken Halim",
+    categoryLink: ["Rice", "Breakfast"],
+    rateus: "⭐⭐⭐⭐",
+    rateusPoint: "4.3",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 17.00,
+    price: 15.00,
+    img: img29,
+    category: [img29, img23, img24],
+  },
+  {
+    id: 30,
+    name: "Chicken Mushroom Pasta",
+    categoryLink: ["Pasta", "Dinner"],
+    rateus: "⭐⭐⭐⭐⭐",
+    rateusPoint: "4.9",
+    titlename: "Lorem ipsum dolor sit amet",
+    oldprice: 25.00,
+    price: 23.50,
+    img: img30,
+    category: [img30, img24, img22],
+  },
+];
+
+
+
+
+
+
+export default item;
+
+
+
+
